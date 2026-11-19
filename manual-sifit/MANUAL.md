@@ -53,7 +53,7 @@ Resultado do passo 5, medido em 19/11/2026:
 | `pedidos` | 0 |
 | Conteúdo real do schema | loja virtual (marcas, banners, artigos, grupos como "Placas de Vídeo", categorias como "Notebook Gamer") |
 
-A listagem de alunos do SIFIT, na mesma data, mostra centenas de códigos (a tela de Clientes indica 151 cadastrados, com códigos na casa de 440). Esses registros não estão no MySQL do slide. A evidência de persistência do SIFIT, portanto, é a API autenticada documentada em cada função. O dicionário completo do MySQL da aula está em [docs/banco/schema.md](docs/banco/schema.md).
+A listagem de alunos do SIFIT, na mesma data, mostra centenas de códigos (a tela de Clientes indica 151 cadastrados, com códigos na casa de 440). Esses registros não estão no MySQL do slide. A evidência de persistência do SIFIT, portanto, é a API autenticada documentada em cada função. Cada tabela do MySQL da aula tem o próprio print em `evidencias/banco/tabelas`.
 
 Prints visuais da consulta somente leitura, no mesmo formato das telas do sistema, gravados em `evidencias/banco/`:
 
@@ -75,7 +75,7 @@ Chamadas comuns a quase toda tela, além da função em si:
 - `GET /api/posts/tela-web/1`
 - `GET /api/denuncias/tela-web/1`
 
-O vídeo abre nesta página, com player: [assistir o vídeo](https://ale7639.github.io/extensao-6-SIFIT-Diego-Wallace/manual-sifit/evidencias/video/assistir.html). O arquivo `evidencias/video/manual-sifit-telas.mp4` é a mesma gravação. Ele percorre as telas na ordem dos prints.
+Os vídeos abrem nesta página, com um player para cada parte: [assistir os vídeos](https://ale7639.github.io/extensao-6-SIFIT-Diego-Wallace/manual-sifit/evidencias/video/assistir.html). O percurso completo continua em `evidencias/video/manual-sifit-telas.mp4`.
 
 ## 3. Acesso
 
@@ -1091,16 +1091,19 @@ Persistência:
 
 Os prints `42` a `52` são os formulários e os cadastros de apoio citados nas seções 5, 7 e 9.
 
-## 14. Vídeo
+## 14. Vídeos
 
-A gravação abre em [assistir o vídeo](https://ale7639.github.io/extensao-6-SIFIT-Diego-Wallace/manual-sifit/evidencias/video/assistir.html) e percorre, nesta ordem:
+As gravações abrem nesta página, cada uma com o próprio player: [assistir os vídeos](https://ale7639.github.io/extensao-6-SIFIT-Diego-Wallace/manual-sifit/evidencias/video/assistir.html).
 
-1. Login
-2. Cada item do menu, de Página Inicial até Aplicativo
-3. Os formulários de cliente, matrícula, avaliação, contas, colaborador e fornecedor
-4. Bancos, local de contas e categorias de conta a pagar
+1. Início e presença — `evidencias/video/01-inicio-e-presenca.mp4`
+2. Clientes e matrículas — `evidencias/video/02-clientes-e-matriculas.mp4`
+3. Avaliações e treino — `evidencias/video/03-avaliacoes-e-treino.mp4`
+4. Financeiro — `evidencias/video/04-financeiro.mp4`
+5. Cadastros — `evidencias/video/05-cadastros.mp4`
+6. Anamnese e aplicativo — `evidencias/video/06-anamnese-e-aplicativo.mp4`
+7. Percurso completo, da página inicial até o aplicativo — `evidencias/video/manual-sifit-telas.mp4`
 
-O material da aula pede esse vídeo também no Google Drive. O link deve ser colado no [README](../README.md), no lugar de `COLOCAR_LINK_DO_GOOGLE_DRIVE`.
+O material da aula pede esses vídeos também no Google Drive. O link deve ser colado no [README](../README.md), no lugar de `COLOCAR_LINK_DO_GOOGLE_DRIVE`.
 
 Sugestão de narração, se a dupla for regravar com o Jam:
 
