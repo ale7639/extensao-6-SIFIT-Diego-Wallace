@@ -65,7 +65,7 @@ Prints visuais da consulta somente leitura, no mesmo formato das telas do sistem
 
 ![Conteúdo da tabela grupos neste schema](evidencias/banco/04-grupos-da-loja.png)
 
-As categorias e as marcas desse schema estão em `evidencias/banco/05-resultado-completo.png`.
+As categorias e as marcas desse schema estão em `evidencias/banco/05-resultado-completo.png`. Cada uma das 43 tabelas do MySQL tem o próprio print em [evidencias/banco/tabelas](evidencias/banco/tabelas).
 
 Chamadas comuns a quase toda tela, além da função em si:
 
