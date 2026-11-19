@@ -55,7 +55,7 @@ Resultado do passo 5, medido em 19/11/2026:
 
 A listagem de alunos do SIFIT, na mesma data, mostra centenas de códigos (a tela de Clientes indica 151 cadastrados, com códigos na casa de 440). Esses registros não estão no MySQL do slide. A evidência de persistência do SIFIT, portanto, é a API autenticada documentada em cada função. O dicionário completo do MySQL da aula está em [docs/banco/schema.md](docs/banco/schema.md).
 
-Prints da consulta somente leitura, gravados em `evidencias/banco/`:
+Prints visuais da consulta somente leitura, no mesmo formato das telas do sistema, gravados em `evidencias/banco/`:
 
 ![Conexão e lista de tabelas](evidencias/banco/01-conexao-e-tabelas.png)
 
@@ -65,7 +65,7 @@ Prints da consulta somente leitura, gravados em `evidencias/banco/`:
 
 ![Conteúdo da tabela grupos neste schema](evidencias/banco/04-grupos-da-loja.png)
 
-O resultado inteiro da consulta está em `evidencias/banco/05-resultado-completo.png`.
+As categorias e as marcas desse schema estão em `evidencias/banco/05-resultado-completo.png`.
 
 Chamadas comuns a quase toda tela, além da função em si:
 
