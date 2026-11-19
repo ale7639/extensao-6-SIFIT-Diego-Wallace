@@ -1,0 +1,4713 @@
+{
+  "database": "u339572246_alfa1",
+  "capturedAt": "2026-11-19T18:28:59.045Z",
+  "tables": [
+    {
+      "TABLE_NAME": "artigos",
+      "TABLE_ROWS": 15,
+      "TABLE_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "atributos",
+      "TABLE_ROWS": 170,
+      "TABLE_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "authentication_methods",
+      "TABLE_ROWS": 0,
+      "TABLE_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "banners",
+      "TABLE_ROWS": 9,
+      "TABLE_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "cartoes",
+      "TABLE_ROWS": 0,
+      "TABLE_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "categorias",
+      "TABLE_ROWS": 29,
+      "TABLE_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "categoria_artigos",
+      "TABLE_ROWS": 4,
+      "TABLE_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "cidades",
+      "TABLE_ROWS": 5585,
+      "TABLE_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "clientes",
+      "TABLE_ROWS": 1,
+      "TABLE_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "combos",
+      "TABLE_ROWS": 3,
+      "TABLE_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "configuracoes",
+      "TABLE_ROWS": 2,
+      "TABLE_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "contatos",
+      "TABLE_ROWS": 0,
+      "TABLE_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "cupons",
+      "TABLE_ROWS": 3,
+      "TABLE_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "empresa",
+      "TABLE_ROWS": 0,
+      "TABLE_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "enderecos",
+      "TABLE_ROWS": 0,
+      "TABLE_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "estados",
+      "TABLE_ROWS": 27,
+      "TABLE_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "estoques",
+      "TABLE_ROWS": 0,
+      "TABLE_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "failed_jobs",
+      "TABLE_ROWS": 0,
+      "TABLE_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "grupos",
+      "TABLE_ROWS": 12,
+      "TABLE_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "identity_link_intents",
+      "TABLE_ROWS": 0,
+      "TABLE_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "imagens_produtos",
+      "TABLE_ROWS": 0,
+      "TABLE_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "instagram_accounts",
+      "TABLE_ROWS": 0,
+      "TABLE_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "instagram_posts",
+      "TABLE_ROWS": 0,
+      "TABLE_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "marcas",
+      "TABLE_ROWS": 7,
+      "TABLE_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "melhor_envio",
+      "TABLE_ROWS": 0,
+      "TABLE_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "migrations",
+      "TABLE_ROWS": 24,
+      "TABLE_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "newsletter",
+      "TABLE_ROWS": 0,
+      "TABLE_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "paginas",
+      "TABLE_ROWS": 0,
+      "TABLE_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "parceiros",
+      "TABLE_ROWS": 4,
+      "TABLE_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "parcelamento",
+      "TABLE_ROWS": 0,
+      "TABLE_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "password_reset_tokens",
+      "TABLE_ROWS": 0,
+      "TABLE_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "pedidos",
+      "TABLE_ROWS": 0,
+      "TABLE_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "perguntas",
+      "TABLE_ROWS": 0,
+      "TABLE_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "personal_access_tokens",
+      "TABLE_ROWS": 391,
+      "TABLE_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "produtos",
+      "TABLE_ROWS": 0,
+      "TABLE_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "produtos_3d",
+      "TABLE_ROWS": 0,
+      "TABLE_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "produtos_pedidos",
+      "TABLE_ROWS": 0,
+      "TABLE_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "security_events",
+      "TABLE_ROWS": 0,
+      "TABLE_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "sessions",
+      "TABLE_ROWS": 0,
+      "TABLE_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "social_accounts",
+      "TABLE_ROWS": 0,
+      "TABLE_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "social_auth_codes",
+      "TABLE_ROWS": 0,
+      "TABLE_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "users",
+      "TABLE_ROWS": 1,
+      "TABLE_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "valores_variacoes",
+      "TABLE_ROWS": 0,
+      "TABLE_COMMENT": ""
+    }
+  ],
+  "columns": [
+    {
+      "TABLE_NAME": "artigos",
+      "COLUMN_NAME": "id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "PRI",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "auto_increment",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "artigos",
+      "COLUMN_NAME": "categoria_artigo_id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "MUL",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "artigos",
+      "COLUMN_NAME": "titulo",
+      "COLUMN_TYPE": "varchar(150)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "artigos",
+      "COLUMN_NAME": "urn",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "artigos",
+      "COLUMN_NAME": "resumo",
+      "COLUMN_TYPE": "varchar(300)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "artigos",
+      "COLUMN_NAME": "conteudo",
+      "COLUMN_TYPE": "longtext",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "artigos",
+      "COLUMN_NAME": "imagem_capa",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "artigos",
+      "COLUMN_NAME": "status",
+      "COLUMN_TYPE": "enum('RASCUNHO','PUBLICADO')",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "'RASCUNHO'",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "artigos",
+      "COLUMN_NAME": "data_publicacao",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "artigos",
+      "COLUMN_NAME": "created_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "artigos",
+      "COLUMN_NAME": "updated_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "atributos",
+      "COLUMN_NAME": "id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "PRI",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "auto_increment",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "atributos",
+      "COLUMN_NAME": "produto_id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "MUL",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "atributos",
+      "COLUMN_NAME": "nome",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "atributos",
+      "COLUMN_NAME": "valor",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "atributos",
+      "COLUMN_NAME": "created_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "atributos",
+      "COLUMN_NAME": "updated_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "authentication_methods",
+      "COLUMN_NAME": "id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "PRI",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "auto_increment",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "authentication_methods",
+      "COLUMN_NAME": "account_type",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "MUL",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "authentication_methods",
+      "COLUMN_NAME": "account_id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "authentication_methods",
+      "COLUMN_NAME": "type",
+      "COLUMN_TYPE": "varchar(40)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "authentication_methods",
+      "COLUMN_NAME": "reference",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "authentication_methods",
+      "COLUMN_NAME": "status",
+      "COLUMN_TYPE": "varchar(30)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "'ACTIVE'",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "authentication_methods",
+      "COLUMN_NAME": "verified_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "authentication_methods",
+      "COLUMN_NAME": "last_used_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "authentication_methods",
+      "COLUMN_NAME": "data",
+      "COLUMN_TYPE": "longtext",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "authentication_methods",
+      "COLUMN_NAME": "created_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "authentication_methods",
+      "COLUMN_NAME": "updated_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "banners",
+      "COLUMN_NAME": "id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "PRI",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "auto_increment",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "banners",
+      "COLUMN_NAME": "categoria",
+      "COLUMN_TYPE": "enum('PRINCIPAL','CENTRAL')",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "'PRINCIPAL'",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "banners",
+      "COLUMN_NAME": "ordem",
+      "COLUMN_TYPE": "int(10) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "0",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "banners",
+      "COLUMN_NAME": "nome",
+      "COLUMN_TYPE": "varchar(150)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "banners",
+      "COLUMN_NAME": "titulo",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "banners",
+      "COLUMN_NAME": "tag",
+      "COLUMN_TYPE": "varchar(100)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "banners",
+      "COLUMN_NAME": "descricao",
+      "COLUMN_TYPE": "text",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "banners",
+      "COLUMN_NAME": "imagem",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "banners",
+      "COLUMN_NAME": "created_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "banners",
+      "COLUMN_NAME": "updated_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "banners",
+      "COLUMN_NAME": "imagem_cel",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "banners",
+      "COLUMN_NAME": "url",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "cartoes",
+      "COLUMN_NAME": "id",
+      "COLUMN_TYPE": "int(11)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "PRI",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "auto_increment",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "cartoes",
+      "COLUMN_NAME": "cliente_id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "MUL",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "cartoes",
+      "COLUMN_NAME": "pagarme_id",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "cartoes",
+      "COLUMN_NAME": "created_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "current_timestamp()",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "cartoes",
+      "COLUMN_NAME": "updated_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "current_timestamp()",
+      "EXTRA": "on update current_timestamp()",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "categorias",
+      "COLUMN_NAME": "id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "PRI",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "auto_increment",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "categorias",
+      "COLUMN_NAME": "grupo_id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "MUL",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "categorias",
+      "COLUMN_NAME": "nome",
+      "COLUMN_TYPE": "varchar(80)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "categorias",
+      "COLUMN_NAME": "urn",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "categorias",
+      "COLUMN_NAME": "status",
+      "COLUMN_TYPE": "enum('ATIVO','INATIVO')",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "categorias",
+      "COLUMN_NAME": "created_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "categorias",
+      "COLUMN_NAME": "updated_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "categorias",
+      "COLUMN_NAME": "imagem",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "categoria_artigos",
+      "COLUMN_NAME": "id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "PRI",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "auto_increment",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "categoria_artigos",
+      "COLUMN_NAME": "nome",
+      "COLUMN_TYPE": "varchar(80)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "categoria_artigos",
+      "COLUMN_NAME": "urn",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "categoria_artigos",
+      "COLUMN_NAME": "status",
+      "COLUMN_TYPE": "enum('ATIVO','INATIVO')",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "'ATIVO'",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "categoria_artigos",
+      "COLUMN_NAME": "created_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "categoria_artigos",
+      "COLUMN_NAME": "updated_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "cidades",
+      "COLUMN_NAME": "id",
+      "COLUMN_TYPE": "int(10) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "PRI",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "auto_increment",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "cidades",
+      "COLUMN_NAME": "nome",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "cidades",
+      "COLUMN_NAME": "codigo_ibge",
+      "COLUMN_TYPE": "int(11)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "cidades",
+      "COLUMN_NAME": "estado_id",
+      "COLUMN_TYPE": "int(10) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "MUL",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "cidades",
+      "COLUMN_NAME": "created_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "cidades",
+      "COLUMN_NAME": "updated_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "clientes",
+      "COLUMN_NAME": "id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "PRI",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "auto_increment",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "clientes",
+      "COLUMN_NAME": "nome",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "clientes",
+      "COLUMN_NAME": "status",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "'ATIVO'",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "clientes",
+      "COLUMN_NAME": "email",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "UNI",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "clientes",
+      "COLUMN_NAME": "cpf",
+      "COLUMN_TYPE": "varchar(20)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "UNI",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "clientes",
+      "COLUMN_NAME": "cnpj",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "UNI",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "clientes",
+      "COLUMN_NAME": "tipo_pessoa",
+      "COLUMN_TYPE": "enum('FISICA','JURIDICA')",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "'FISICA'",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "clientes",
+      "COLUMN_NAME": "data_nascimento",
+      "COLUMN_TYPE": "date",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "clientes",
+      "COLUMN_NAME": "telefone_principal",
+      "COLUMN_TYPE": "varchar(20)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "clientes",
+      "COLUMN_NAME": "telefone_alternativo",
+      "COLUMN_TYPE": "varchar(20)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "clientes",
+      "COLUMN_NAME": "parceiro_id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "MUL",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "clientes",
+      "COLUMN_NAME": "created_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "clientes",
+      "COLUMN_NAME": "updated_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "clientes",
+      "COLUMN_NAME": "password",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "clientes",
+      "COLUMN_NAME": "password_set_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "clientes",
+      "COLUMN_NAME": "remember_token",
+      "COLUMN_TYPE": "varchar(100)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "clientes",
+      "COLUMN_NAME": "pagarme_id",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "clientes",
+      "COLUMN_NAME": "token",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "clientes",
+      "COLUMN_NAME": "data_admissao",
+      "COLUMN_TYPE": "date",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "clientes",
+      "COLUMN_NAME": "avatar",
+      "COLUMN_TYPE": "varchar(2048)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "clientes",
+      "COLUMN_NAME": "avatar_source",
+      "COLUMN_TYPE": "varchar(30)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "clientes",
+      "COLUMN_NAME": "session_version",
+      "COLUMN_TYPE": "int(10) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "0",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "combos",
+      "COLUMN_NAME": "id",
+      "COLUMN_TYPE": "int(11)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "PRI",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "auto_increment",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "combos",
+      "COLUMN_NAME": "descricao",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "combos",
+      "COLUMN_NAME": "produto_1",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "MUL",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "combos",
+      "COLUMN_NAME": "produto_2",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "MUL",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "combos",
+      "COLUMN_NAME": "valor_total",
+      "COLUMN_TYPE": "float",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "combos",
+      "COLUMN_NAME": "destaque",
+      "COLUMN_TYPE": "enum('SIM','NAO')",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "combos",
+      "COLUMN_NAME": "status",
+      "COLUMN_TYPE": "enum('ATIVO','INATIVO')",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "combos",
+      "COLUMN_NAME": "created_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "current_timestamp()",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "combos",
+      "COLUMN_NAME": "updated_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "combos",
+      "COLUMN_NAME": "parcelas",
+      "COLUMN_TYPE": "int(11)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "configuracoes",
+      "COLUMN_NAME": "id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "PRI",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "auto_increment",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "configuracoes",
+      "COLUMN_NAME": "chave",
+      "COLUMN_TYPE": "varchar(100)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "UNI",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "configuracoes",
+      "COLUMN_NAME": "valor",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "configuracoes",
+      "COLUMN_NAME": "created_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "configuracoes",
+      "COLUMN_NAME": "updated_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "contatos",
+      "COLUMN_NAME": "id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "PRI",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "auto_increment",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "contatos",
+      "COLUMN_NAME": "nome",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "contatos",
+      "COLUMN_NAME": "email",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "contatos",
+      "COLUMN_NAME": "telefone",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "contatos",
+      "COLUMN_NAME": "status",
+      "COLUMN_TYPE": "enum('LIDO','NAO_LIDO')",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "'NAO_LIDO'",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "contatos",
+      "COLUMN_NAME": "mensagem",
+      "COLUMN_TYPE": "text",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "contatos",
+      "COLUMN_NAME": "created_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "contatos",
+      "COLUMN_NAME": "updated_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "cupons",
+      "COLUMN_NAME": "id",
+      "COLUMN_TYPE": "int(10) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "PRI",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "auto_increment",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "cupons",
+      "COLUMN_NAME": "codigo",
+      "COLUMN_TYPE": "varchar(10)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "cupons",
+      "COLUMN_NAME": "desconto",
+      "COLUMN_TYPE": "float",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "cupons",
+      "COLUMN_NAME": "data_inicial",
+      "COLUMN_TYPE": "date",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "cupons",
+      "COLUMN_NAME": "validade",
+      "COLUMN_TYPE": "date",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "cupons",
+      "COLUMN_NAME": "created_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "cupons",
+      "COLUMN_NAME": "updated_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "cupons",
+      "COLUMN_NAME": "nome",
+      "COLUMN_TYPE": "varchar(200)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "cupons",
+      "COLUMN_NAME": "status",
+      "COLUMN_TYPE": "enum('ATIVO','CANCELADO','VENCIDO')",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "cupons",
+      "COLUMN_NAME": "tipo_desconto",
+      "COLUMN_TYPE": "enum('PERCENTUAL','VALOR')",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "cupons",
+      "COLUMN_NAME": "parceiro_id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "MUL",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "cupons",
+      "COLUMN_NAME": "valido_apenas_primeira_compra",
+      "COLUMN_TYPE": "enum('SIM','NAO')",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "empresa",
+      "COLUMN_NAME": "id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "PRI",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "auto_increment",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "empresa",
+      "COLUMN_NAME": "instagram",
+      "COLUMN_TYPE": "varchar(120)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "empresa",
+      "COLUMN_NAME": "facebook",
+      "COLUMN_TYPE": "varchar(120)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "empresa",
+      "COLUMN_NAME": "endereco",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "empresa",
+      "COLUMN_NAME": "numero",
+      "COLUMN_TYPE": "varchar(10)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "empresa",
+      "COLUMN_NAME": "cidade_uf",
+      "COLUMN_TYPE": "varchar(100)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "empresa",
+      "COLUMN_NAME": "telefone",
+      "COLUMN_TYPE": "varchar(20)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "empresa",
+      "COLUMN_NAME": "whatsapp",
+      "COLUMN_TYPE": "varchar(20)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "empresa",
+      "COLUMN_NAME": "cep",
+      "COLUMN_TYPE": "varchar(20)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "empresa",
+      "COLUMN_NAME": "created_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "empresa",
+      "COLUMN_NAME": "updated_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "empresa",
+      "COLUMN_NAME": "meta_descricao",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "empresa",
+      "COLUMN_NAME": "meta_nome",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "empresa",
+      "COLUMN_NAME": "twitter",
+      "COLUMN_TYPE": "varchar(100)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "empresa",
+      "COLUMN_NAME": "sobre_nos",
+      "COLUMN_TYPE": "text",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "empresa",
+      "COLUMN_NAME": "email",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "empresa",
+      "COLUMN_NAME": "numero_telefone",
+      "COLUMN_TYPE": "varchar(20)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "empresa",
+      "COLUMN_NAME": "juros",
+      "COLUMN_TYPE": "float",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "empresa",
+      "COLUMN_NAME": "texto_resumido",
+      "COLUMN_TYPE": "text",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "empresa",
+      "COLUMN_NAME": "bairro",
+      "COLUMN_TYPE": "varchar(80)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "enderecos",
+      "COLUMN_NAME": "id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "PRI",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "auto_increment",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "enderecos",
+      "COLUMN_NAME": "cliente_id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "MUL",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "enderecos",
+      "COLUMN_NAME": "cidade_id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "enderecos",
+      "COLUMN_NAME": "cep",
+      "COLUMN_TYPE": "varchar(20)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "enderecos",
+      "COLUMN_NAME": "logradouro",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "enderecos",
+      "COLUMN_NAME": "numero",
+      "COLUMN_TYPE": "varchar(10)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "enderecos",
+      "COLUMN_NAME": "bairro",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "enderecos",
+      "COLUMN_NAME": "complemento",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "enderecos",
+      "COLUMN_NAME": "telefone",
+      "COLUMN_TYPE": "varchar(20)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "enderecos",
+      "COLUMN_NAME": "created_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "enderecos",
+      "COLUMN_NAME": "updated_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "enderecos",
+      "COLUMN_NAME": "principal",
+      "COLUMN_TYPE": "enum('SIM','NAO')",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "enderecos",
+      "COLUMN_NAME": "nome",
+      "COLUMN_TYPE": "varchar(100)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "estados",
+      "COLUMN_NAME": "id",
+      "COLUMN_TYPE": "int(10) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "PRI",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "auto_increment",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "estados",
+      "COLUMN_NAME": "nome",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "estados",
+      "COLUMN_NAME": "uf",
+      "COLUMN_TYPE": "char(2)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "estados",
+      "COLUMN_NAME": "codigo_uf",
+      "COLUMN_TYPE": "int(11)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "estados",
+      "COLUMN_NAME": "created_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "estados",
+      "COLUMN_NAME": "updated_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "estoques",
+      "COLUMN_NAME": "id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "PRI",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "auto_increment",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "estoques",
+      "COLUMN_NAME": "quantidade",
+      "COLUMN_TYPE": "int(11)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "estoques",
+      "COLUMN_NAME": "quantidade_reservada",
+      "COLUMN_TYPE": "int(11)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "0",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "estoques",
+      "COLUMN_NAME": "produto_id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "MUL",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "estoques",
+      "COLUMN_NAME": "valor_variacao_id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "MUL",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "estoques",
+      "COLUMN_NAME": "created_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "estoques",
+      "COLUMN_NAME": "updated_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "failed_jobs",
+      "COLUMN_NAME": "id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "PRI",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "auto_increment",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "failed_jobs",
+      "COLUMN_NAME": "uuid",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "UNI",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "failed_jobs",
+      "COLUMN_NAME": "connection",
+      "COLUMN_TYPE": "text",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "failed_jobs",
+      "COLUMN_NAME": "queue",
+      "COLUMN_TYPE": "text",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "failed_jobs",
+      "COLUMN_NAME": "payload",
+      "COLUMN_TYPE": "longtext",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "failed_jobs",
+      "COLUMN_NAME": "exception",
+      "COLUMN_TYPE": "longtext",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "failed_jobs",
+      "COLUMN_NAME": "failed_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "current_timestamp()",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "grupos",
+      "COLUMN_NAME": "id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "PRI",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "auto_increment",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "grupos",
+      "COLUMN_NAME": "nome",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "grupos",
+      "COLUMN_NAME": "urn",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "grupos",
+      "COLUMN_NAME": "status",
+      "COLUMN_TYPE": "enum('ATIVO','INATIVO')",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "grupos",
+      "COLUMN_NAME": "destaque1",
+      "COLUMN_TYPE": "enum('SIM','NAO')",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "grupos",
+      "COLUMN_NAME": "destaque2",
+      "COLUMN_TYPE": "enum('SIM','NAO')",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "grupos",
+      "COLUMN_NAME": "imagem",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "grupos",
+      "COLUMN_NAME": "ordem",
+      "COLUMN_TYPE": "int(10) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "0",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "grupos",
+      "COLUMN_NAME": "created_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "grupos",
+      "COLUMN_NAME": "updated_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "identity_link_intents",
+      "COLUMN_NAME": "id",
+      "COLUMN_TYPE": "char(36)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "PRI",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "identity_link_intents",
+      "COLUMN_NAME": "account_type",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "MUL",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "identity_link_intents",
+      "COLUMN_NAME": "account_id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "identity_link_intents",
+      "COLUMN_NAME": "provider",
+      "COLUMN_TYPE": "varchar(50)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "identity_link_intents",
+      "COLUMN_NAME": "connection_key",
+      "COLUMN_TYPE": "varchar(80)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "identity_link_intents",
+      "COLUMN_NAME": "state_hash",
+      "COLUMN_TYPE": "varchar(64)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "identity_link_intents",
+      "COLUMN_NAME": "code_challenge",
+      "COLUMN_TYPE": "varchar(64)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "identity_link_intents",
+      "COLUMN_NAME": "session_id_hash",
+      "COLUMN_TYPE": "varchar(64)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "identity_link_intents",
+      "COLUMN_NAME": "expires_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "identity_link_intents",
+      "COLUMN_NAME": "consumed_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "identity_link_intents",
+      "COLUMN_NAME": "provider_subject",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "identity_link_intents",
+      "COLUMN_NAME": "created_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "identity_link_intents",
+      "COLUMN_NAME": "updated_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "imagens_produtos",
+      "COLUMN_NAME": "id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "PRI",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "auto_increment",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "imagens_produtos",
+      "COLUMN_NAME": "produto_id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "MUL",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "imagens_produtos",
+      "COLUMN_NAME": "imagem",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "imagens_produtos",
+      "COLUMN_NAME": "created_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "imagens_produtos",
+      "COLUMN_NAME": "updated_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "imagens_produtos",
+      "COLUMN_NAME": "numero",
+      "COLUMN_TYPE": "int(11)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "imagens_produtos",
+      "COLUMN_NAME": "imagem_thumb",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "instagram_accounts",
+      "COLUMN_NAME": "id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "PRI",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "auto_increment",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "instagram_accounts",
+      "COLUMN_NAME": "empresa_id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "MUL",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "instagram_accounts",
+      "COLUMN_NAME": "instagram_user_id",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "MUL",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "instagram_accounts",
+      "COLUMN_NAME": "instagram_business_id",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "MUL",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "instagram_accounts",
+      "COLUMN_NAME": "facebook_page_id",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "MUL",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "instagram_accounts",
+      "COLUMN_NAME": "username",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "instagram_accounts",
+      "COLUMN_NAME": "name",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "instagram_accounts",
+      "COLUMN_NAME": "profile_picture",
+      "COLUMN_TYPE": "text",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "instagram_accounts",
+      "COLUMN_NAME": "access_token",
+      "COLUMN_TYPE": "text",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "instagram_accounts",
+      "COLUMN_NAME": "refresh_token",
+      "COLUMN_TYPE": "text",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "instagram_accounts",
+      "COLUMN_NAME": "expires_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "instagram_accounts",
+      "COLUMN_NAME": "status",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "MUL",
+      "COLUMN_DEFAULT": "'connected'",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "instagram_accounts",
+      "COLUMN_NAME": "created_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "instagram_accounts",
+      "COLUMN_NAME": "updated_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "instagram_posts",
+      "COLUMN_NAME": "id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "PRI",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "auto_increment",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "instagram_posts",
+      "COLUMN_NAME": "empresa_id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "MUL",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "instagram_posts",
+      "COLUMN_NAME": "instagram_post_id",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "UNI",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "instagram_posts",
+      "COLUMN_NAME": "caption",
+      "COLUMN_TYPE": "text",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "instagram_posts",
+      "COLUMN_NAME": "media_type",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "MUL",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "instagram_posts",
+      "COLUMN_NAME": "media_url",
+      "COLUMN_TYPE": "text",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "instagram_posts",
+      "COLUMN_NAME": "thumbnail_url",
+      "COLUMN_TYPE": "text",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "instagram_posts",
+      "COLUMN_NAME": "permalink",
+      "COLUMN_TYPE": "text",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "instagram_posts",
+      "COLUMN_NAME": "timestamp",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "MUL",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "instagram_posts",
+      "COLUMN_NAME": "username",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "instagram_posts",
+      "COLUMN_NAME": "raw_json",
+      "COLUMN_TYPE": "longtext",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "instagram_posts",
+      "COLUMN_NAME": "created_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "instagram_posts",
+      "COLUMN_NAME": "updated_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "marcas",
+      "COLUMN_NAME": "id",
+      "COLUMN_TYPE": "int(11)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "PRI",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "auto_increment",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "marcas",
+      "COLUMN_NAME": "nome",
+      "COLUMN_TYPE": "varchar(80)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "marcas",
+      "COLUMN_NAME": "logo",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "marcas",
+      "COLUMN_NAME": "status",
+      "COLUMN_TYPE": "enum('INATIVO','ATIVO')",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "marcas",
+      "COLUMN_NAME": "created_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "current_timestamp()",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "marcas",
+      "COLUMN_NAME": "updated_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "current_timestamp()",
+      "EXTRA": "on update current_timestamp()",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "melhor_envio",
+      "COLUMN_NAME": "id",
+      "COLUMN_TYPE": "int(11)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "PRI",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "auto_increment",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "melhor_envio",
+      "COLUMN_NAME": "token",
+      "COLUMN_TYPE": "text",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "melhor_envio",
+      "COLUMN_NAME": "refresh_token",
+      "COLUMN_TYPE": "text",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "melhor_envio",
+      "COLUMN_NAME": "client_id",
+      "COLUMN_TYPE": "varchar(45)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "melhor_envio",
+      "COLUMN_NAME": "client_secret",
+      "COLUMN_TYPE": "varchar(45)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "melhor_envio",
+      "COLUMN_NAME": "redirect_uri",
+      "COLUMN_TYPE": "varchar(45)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "melhor_envio",
+      "COLUMN_NAME": "erro",
+      "COLUMN_TYPE": "text",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "melhor_envio",
+      "COLUMN_NAME": "created_at",
+      "COLUMN_TYPE": "datetime",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "melhor_envio",
+      "COLUMN_NAME": "updated_at",
+      "COLUMN_TYPE": "datetime",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "migrations",
+      "COLUMN_NAME": "id",
+      "COLUMN_TYPE": "int(10) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "PRI",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "auto_increment",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "migrations",
+      "COLUMN_NAME": "migration",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "migrations",
+      "COLUMN_NAME": "batch",
+      "COLUMN_TYPE": "int(11)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "newsletter",
+      "COLUMN_NAME": "id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "PRI",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "auto_increment",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "newsletter",
+      "COLUMN_NAME": "email",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "UNI",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "newsletter",
+      "COLUMN_NAME": "whatsapp",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "UNI",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "newsletter",
+      "COLUMN_NAME": "telefone",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "newsletter",
+      "COLUMN_NAME": "preferencia_contato",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "'email'",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "newsletter",
+      "COLUMN_NAME": "created_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "newsletter",
+      "COLUMN_NAME": "updated_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "paginas",
+      "COLUMN_NAME": "id",
+      "COLUMN_TYPE": "int(11)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "PRI",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "auto_increment",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "paginas",
+      "COLUMN_NAME": "nome",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "paginas",
+      "COLUMN_NAME": "sobre",
+      "COLUMN_TYPE": "text",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "paginas",
+      "COLUMN_NAME": "created_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "current_timestamp()",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "paginas",
+      "COLUMN_NAME": "updated_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "current_timestamp()",
+      "EXTRA": "on update current_timestamp()",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "parceiros",
+      "COLUMN_NAME": "id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "PRI",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "auto_increment",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "parceiros",
+      "COLUMN_NAME": "nome",
+      "COLUMN_TYPE": "varchar(200)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "parceiros",
+      "COLUMN_NAME": "email",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "parceiros",
+      "COLUMN_NAME": "telefone",
+      "COLUMN_TYPE": "varchar(20)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "parceiros",
+      "COLUMN_NAME": "codigo",
+      "COLUMN_TYPE": "varchar(20)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "UNI",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "parceiros",
+      "COLUMN_NAME": "status",
+      "COLUMN_TYPE": "enum('ATIVO','INATIVO')",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "'ATIVO'",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "parceiros",
+      "COLUMN_NAME": "observacoes",
+      "COLUMN_TYPE": "text",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "parceiros",
+      "COLUMN_NAME": "created_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "parceiros",
+      "COLUMN_NAME": "updated_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "parcelamento",
+      "COLUMN_NAME": "id",
+      "COLUMN_TYPE": "int(11)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "PRI",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "auto_increment",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "parcelamento",
+      "COLUMN_NAME": "parcelas",
+      "COLUMN_TYPE": "int(11)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "parcelamento",
+      "COLUMN_NAME": "taxas",
+      "COLUMN_TYPE": "float",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "parcelamento",
+      "COLUMN_NAME": "created_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "parcelamento",
+      "COLUMN_NAME": "updated_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "password_reset_tokens",
+      "COLUMN_NAME": "email",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "PRI",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "password_reset_tokens",
+      "COLUMN_NAME": "token",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "password_reset_tokens",
+      "COLUMN_NAME": "created_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "pedidos",
+      "COLUMN_NAME": "id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "PRI",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "auto_increment",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "pedidos",
+      "COLUMN_NAME": "codigo_rastreio",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "pedidos",
+      "COLUMN_NAME": "arquivo",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "pedidos",
+      "COLUMN_NAME": "cliente_id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "MUL",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "pedidos",
+      "COLUMN_NAME": "valor_total",
+      "COLUMN_TYPE": "decimal(10,2)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "pedidos",
+      "COLUMN_NAME": "valor_frete",
+      "COLUMN_TYPE": "decimal(10,2)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "pedidos",
+      "COLUMN_NAME": "valor_produtos",
+      "COLUMN_TYPE": "decimal(10,2)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "pedidos",
+      "COLUMN_NAME": "status",
+      "COLUMN_TYPE": "enum('PAGO','PENDENTE','FATURADO','ENVIADO','CANCELADO','ENCERRADO','REJEITADO')",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "'PENDENTE'",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "pedidos",
+      "COLUMN_NAME": "data_envio",
+      "COLUMN_TYPE": "datetime",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "pedidos",
+      "COLUMN_NAME": "data_faturamento",
+      "COLUMN_TYPE": "datetime",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "pedidos",
+      "COLUMN_NAME": "data_entrega",
+      "COLUMN_TYPE": "datetime",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "pedidos",
+      "COLUMN_NAME": "data_cancelamento",
+      "COLUMN_TYPE": "datetime",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "pedidos",
+      "COLUMN_NAME": "observacao",
+      "COLUMN_TYPE": "text",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "pedidos",
+      "COLUMN_NAME": "motivo_cancelamento",
+      "COLUMN_TYPE": "text",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "pedidos",
+      "COLUMN_NAME": "created_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "pedidos",
+      "COLUMN_NAME": "updated_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "pedidos",
+      "COLUMN_NAME": "pagarme_id",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "pedidos",
+      "COLUMN_NAME": "tipo_pagamento",
+      "COLUMN_TYPE": "enum('BOLETO','CARTAO','PIX')",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "pedidos",
+      "COLUMN_NAME": "pix_qr_code",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "pedidos",
+      "COLUMN_NAME": "pix_code",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "pedidos",
+      "COLUMN_NAME": "pdf",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "pedidos",
+      "COLUMN_NAME": "boleto_code",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "pedidos",
+      "COLUMN_NAME": "boleto_qr_code",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "pedidos",
+      "COLUMN_NAME": "cep",
+      "COLUMN_TYPE": "varchar(10)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "pedidos",
+      "COLUMN_NAME": "logradouro",
+      "COLUMN_TYPE": "varchar(100)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "pedidos",
+      "COLUMN_NAME": "numero",
+      "COLUMN_TYPE": "varchar(5)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "pedidos",
+      "COLUMN_NAME": "cidade",
+      "COLUMN_TYPE": "varchar(200)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "pedidos",
+      "COLUMN_NAME": "bairro",
+      "COLUMN_TYPE": "varchar(60)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "pedidos",
+      "COLUMN_NAME": "complemento",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "pedidos",
+      "COLUMN_NAME": "estado",
+      "COLUMN_TYPE": "varchar(10)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "pedidos",
+      "COLUMN_NAME": "estimativa_entrega",
+      "COLUMN_TYPE": "int(11)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "pedidos",
+      "COLUMN_NAME": "tipo_frete",
+      "COLUMN_TYPE": "varchar(150)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "pedidos",
+      "COLUMN_NAME": "cupom_id",
+      "COLUMN_TYPE": "int(10) unsigned",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "MUL",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "pedidos",
+      "COLUMN_NAME": "parceiro_id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "MUL",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "perguntas",
+      "COLUMN_NAME": "id",
+      "COLUMN_TYPE": "int(11)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "PRI",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "auto_increment",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "perguntas",
+      "COLUMN_NAME": "pergunta",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "perguntas",
+      "COLUMN_NAME": "resposta",
+      "COLUMN_TYPE": "text",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "perguntas",
+      "COLUMN_NAME": "status",
+      "COLUMN_TYPE": "enum('ATIVO','INATIVO')",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "perguntas",
+      "COLUMN_NAME": "created_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "current_timestamp()",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "perguntas",
+      "COLUMN_NAME": "updated_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "current_timestamp()",
+      "EXTRA": "on update current_timestamp()",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "personal_access_tokens",
+      "COLUMN_NAME": "id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "PRI",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "auto_increment",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "personal_access_tokens",
+      "COLUMN_NAME": "tokenable_type",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "MUL",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "personal_access_tokens",
+      "COLUMN_NAME": "tokenable_id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "personal_access_tokens",
+      "COLUMN_NAME": "name",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "personal_access_tokens",
+      "COLUMN_NAME": "token",
+      "COLUMN_TYPE": "varchar(64)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "UNI",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "personal_access_tokens",
+      "COLUMN_NAME": "abilities",
+      "COLUMN_TYPE": "text",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "personal_access_tokens",
+      "COLUMN_NAME": "last_used_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "personal_access_tokens",
+      "COLUMN_NAME": "expires_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "personal_access_tokens",
+      "COLUMN_NAME": "created_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "personal_access_tokens",
+      "COLUMN_NAME": "updated_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "produtos",
+      "COLUMN_NAME": "id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "PRI",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "auto_increment",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "produtos",
+      "COLUMN_NAME": "categoria_id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "MUL",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "produtos",
+      "COLUMN_NAME": "ref",
+      "COLUMN_TYPE": "varchar(45)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "produtos",
+      "COLUMN_NAME": "nome",
+      "COLUMN_TYPE": "varchar(80)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "produtos",
+      "COLUMN_NAME": "status",
+      "COLUMN_TYPE": "enum('ATIVO','INATIVO')",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "'ATIVO'",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "produtos",
+      "COLUMN_NAME": "urn",
+      "COLUMN_TYPE": "varchar(60)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "produtos",
+      "COLUMN_NAME": "preco",
+      "COLUMN_TYPE": "double(8,2)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "produtos",
+      "COLUMN_NAME": "preco_pix",
+      "COLUMN_TYPE": "double(8,2)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "produtos",
+      "COLUMN_NAME": "preco_desconto",
+      "COLUMN_TYPE": "double(8,2)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "produtos",
+      "COLUMN_NAME": "parcelas",
+      "COLUMN_TYPE": "int(11)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "produtos",
+      "COLUMN_NAME": "peso",
+      "COLUMN_TYPE": "float",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "produtos",
+      "COLUMN_NAME": "destaque1",
+      "COLUMN_TYPE": "enum('SIM','NAO')",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "'SIM'",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "produtos",
+      "COLUMN_NAME": "destaque2",
+      "COLUMN_TYPE": "enum('SIM','NAO')",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "'SIM'",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "produtos",
+      "COLUMN_NAME": "destaque3",
+      "COLUMN_TYPE": "enum('SIM','NAO')",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "'SIM'",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "produtos",
+      "COLUMN_NAME": "mais_vendidos",
+      "COLUMN_TYPE": "enum('SIM','NAO')",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "'NAO'",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "produtos",
+      "COLUMN_NAME": "descricao",
+      "COLUMN_TYPE": "longtext",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "produtos",
+      "COLUMN_NAME": "medida_altura",
+      "COLUMN_TYPE": "int(11)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "produtos",
+      "COLUMN_NAME": "medida_largura",
+      "COLUMN_TYPE": "int(11)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "produtos",
+      "COLUMN_NAME": "medida_profundidade",
+      "COLUMN_TYPE": "int(11)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "produtos",
+      "COLUMN_NAME": "created_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "produtos",
+      "COLUMN_NAME": "updated_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "produtos",
+      "COLUMN_NAME": "ncm",
+      "COLUMN_TYPE": "varchar(8)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "produtos",
+      "COLUMN_NAME": "ean",
+      "COLUMN_TYPE": "varchar(14)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "produtos",
+      "COLUMN_NAME": "marca_id",
+      "COLUMN_TYPE": "int(11)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "MUL",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "produtos",
+      "COLUMN_NAME": "tem_desconto",
+      "COLUMN_TYPE": "enum('SIM','NAO')",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "produtos",
+      "COLUMN_NAME": "item_unico",
+      "COLUMN_TYPE": "enum('SIM','NAO')",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "produtos",
+      "COLUMN_NAME": "peso_embalado",
+      "COLUMN_TYPE": "float",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "produtos",
+      "COLUMN_NAME": "altura_embalado",
+      "COLUMN_TYPE": "int(11)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "produtos",
+      "COLUMN_NAME": "largura_embalado",
+      "COLUMN_TYPE": "int(11)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "produtos",
+      "COLUMN_NAME": "profundidade_embalado",
+      "COLUMN_TYPE": "int(11)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "produtos",
+      "COLUMN_NAME": "grupo_id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "produtos_3d",
+      "COLUMN_NAME": "id",
+      "COLUMN_TYPE": "int(11)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "PRI",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "auto_increment",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "produtos_3d",
+      "COLUMN_NAME": "arquivo",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "produtos_3d",
+      "COLUMN_NAME": "tipo",
+      "COLUMN_TYPE": "varchar(3)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "produtos_3d",
+      "COLUMN_NAME": "produto_id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "MUL",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "produtos_3d",
+      "COLUMN_NAME": "created_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "produtos_3d",
+      "COLUMN_NAME": "updated_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "produtos_pedidos",
+      "COLUMN_NAME": "id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "PRI",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "auto_increment",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "produtos_pedidos",
+      "COLUMN_NAME": "pedido_id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "MUL",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "produtos_pedidos",
+      "COLUMN_NAME": "produto_id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "MUL",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "produtos_pedidos",
+      "COLUMN_NAME": "valor",
+      "COLUMN_TYPE": "double(8,2)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "produtos_pedidos",
+      "COLUMN_NAME": "estoque_id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "MUL",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "produtos_pedidos",
+      "COLUMN_NAME": "quantidade",
+      "COLUMN_TYPE": "int(11)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "produtos_pedidos",
+      "COLUMN_NAME": "created_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "produtos_pedidos",
+      "COLUMN_NAME": "updated_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "security_events",
+      "COLUMN_NAME": "id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "PRI",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "auto_increment",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "security_events",
+      "COLUMN_NAME": "account_type",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "MUL",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "security_events",
+      "COLUMN_NAME": "account_id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "security_events",
+      "COLUMN_NAME": "event",
+      "COLUMN_TYPE": "varchar(80)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "security_events",
+      "COLUMN_NAME": "provider",
+      "COLUMN_TYPE": "varchar(50)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "security_events",
+      "COLUMN_NAME": "ip_address",
+      "COLUMN_TYPE": "varchar(45)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "security_events",
+      "COLUMN_NAME": "user_agent",
+      "COLUMN_TYPE": "text",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "security_events",
+      "COLUMN_NAME": "context",
+      "COLUMN_TYPE": "longtext",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "security_events",
+      "COLUMN_NAME": "occurred_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "security_events",
+      "COLUMN_NAME": "created_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "security_events",
+      "COLUMN_NAME": "updated_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "sessions",
+      "COLUMN_NAME": "id",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "PRI",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "sessions",
+      "COLUMN_NAME": "user_id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "MUL",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "sessions",
+      "COLUMN_NAME": "ip_address",
+      "COLUMN_TYPE": "varchar(45)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "sessions",
+      "COLUMN_NAME": "user_agent",
+      "COLUMN_TYPE": "text",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "sessions",
+      "COLUMN_NAME": "payload",
+      "COLUMN_TYPE": "longtext",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "sessions",
+      "COLUMN_NAME": "last_activity",
+      "COLUMN_TYPE": "int(11)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "MUL",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "social_accounts",
+      "COLUMN_NAME": "id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "PRI",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "auto_increment",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "social_accounts",
+      "COLUMN_NAME": "account_type",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "MUL",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "social_accounts",
+      "COLUMN_NAME": "account_id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "social_accounts",
+      "COLUMN_NAME": "provider",
+      "COLUMN_TYPE": "varchar(50)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "MUL",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "social_accounts",
+      "COLUMN_NAME": "connection_key",
+      "COLUMN_TYPE": "varchar(80)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "MUL",
+      "COLUMN_DEFAULT": "'default'",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "social_accounts",
+      "COLUMN_NAME": "issuer",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "social_accounts",
+      "COLUMN_NAME": "subject",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "social_accounts",
+      "COLUMN_NAME": "tenant_id",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "social_accounts",
+      "COLUMN_NAME": "provider_id",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "social_accounts",
+      "COLUMN_NAME": "email",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "MUL",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "social_accounts",
+      "COLUMN_NAME": "avatar",
+      "COLUMN_TYPE": "varchar(2048)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "social_accounts",
+      "COLUMN_NAME": "provider_data",
+      "COLUMN_TYPE": "longtext",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "social_accounts",
+      "COLUMN_NAME": "created_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "social_accounts",
+      "COLUMN_NAME": "updated_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "social_accounts",
+      "COLUMN_NAME": "status",
+      "COLUMN_TYPE": "varchar(30)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "'ACTIVE'",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "social_accounts",
+      "COLUMN_NAME": "linked_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "social_accounts",
+      "COLUMN_NAME": "last_authenticated_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "social_accounts",
+      "COLUMN_NAME": "last_synced_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "social_accounts",
+      "COLUMN_NAME": "revoked_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "social_auth_codes",
+      "COLUMN_NAME": "id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "PRI",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "auto_increment",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "social_auth_codes",
+      "COLUMN_NAME": "code_hash",
+      "COLUMN_TYPE": "varchar(64)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "UNI",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "social_auth_codes",
+      "COLUMN_NAME": "account_type",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "MUL",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "social_auth_codes",
+      "COLUMN_NAME": "account_id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "social_auth_codes",
+      "COLUMN_NAME": "provider",
+      "COLUMN_TYPE": "varchar(50)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "social_auth_codes",
+      "COLUMN_NAME": "code_challenge",
+      "COLUMN_TYPE": "varchar(64)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "social_auth_codes",
+      "COLUMN_NAME": "session_id_hash",
+      "COLUMN_TYPE": "varchar(64)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "social_auth_codes",
+      "COLUMN_NAME": "expires_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "social_auth_codes",
+      "COLUMN_NAME": "consumed_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "social_auth_codes",
+      "COLUMN_NAME": "created_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "social_auth_codes",
+      "COLUMN_NAME": "updated_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "users",
+      "COLUMN_NAME": "id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "PRI",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "auto_increment",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "users",
+      "COLUMN_NAME": "nome",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "users",
+      "COLUMN_NAME": "email",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "UNI",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "users",
+      "COLUMN_NAME": "senha",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "users",
+      "COLUMN_NAME": "status",
+      "COLUMN_TYPE": "enum('ATIVO','INATIVO')",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "'ATIVO'",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "users",
+      "COLUMN_NAME": "created_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "users",
+      "COLUMN_NAME": "updated_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "valores_variacoes",
+      "COLUMN_NAME": "id",
+      "COLUMN_TYPE": "bigint(20) unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "PRI",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "auto_increment",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "valores_variacoes",
+      "COLUMN_NAME": "nome",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": null,
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "valores_variacoes",
+      "COLUMN_NAME": "created_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "TABLE_NAME": "valores_variacoes",
+      "COLUMN_NAME": "updated_at",
+      "COLUMN_TYPE": "timestamp",
+      "IS_NULLABLE": "YES",
+      "COLUMN_KEY": "",
+      "COLUMN_DEFAULT": "NULL",
+      "EXTRA": "",
+      "COLUMN_COMMENT": ""
+    }
+  ],
+  "foreignKeys": [
+    {
+      "TABLE_NAME": "artigos",
+      "COLUMN_NAME": "categoria_artigo_id",
+      "CONSTRAINT_NAME": "artigos_categoria_artigo_id_foreign",
+      "REFERENCED_TABLE_NAME": "categoria_artigos",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "atributos",
+      "COLUMN_NAME": "produto_id",
+      "CONSTRAINT_NAME": "atributos_produto_id_foreign",
+      "REFERENCED_TABLE_NAME": "produtos",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "cartoes",
+      "COLUMN_NAME": "cliente_id",
+      "CONSTRAINT_NAME": "cartoes_cliente_id",
+      "REFERENCED_TABLE_NAME": "clientes",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "categorias",
+      "COLUMN_NAME": "grupo_id",
+      "CONSTRAINT_NAME": "categorias_grupo_id_foreign",
+      "REFERENCED_TABLE_NAME": "grupos",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "cidades",
+      "COLUMN_NAME": "estado_id",
+      "CONSTRAINT_NAME": "cidades_estado_id_foreign",
+      "REFERENCED_TABLE_NAME": "estados",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "clientes",
+      "COLUMN_NAME": "parceiro_id",
+      "CONSTRAINT_NAME": "clientes_parceiro_id_foreign",
+      "REFERENCED_TABLE_NAME": "parceiros",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "combos",
+      "COLUMN_NAME": "produto_1",
+      "CONSTRAINT_NAME": "combos_produtos_FK",
+      "REFERENCED_TABLE_NAME": "produtos",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "combos",
+      "COLUMN_NAME": "produto_2",
+      "CONSTRAINT_NAME": "combos_produtos_FK_1",
+      "REFERENCED_TABLE_NAME": "produtos",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "cupons",
+      "COLUMN_NAME": "parceiro_id",
+      "CONSTRAINT_NAME": "cupons_parceiro_id_foreign",
+      "REFERENCED_TABLE_NAME": "parceiros",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "enderecos",
+      "COLUMN_NAME": "cliente_id",
+      "CONSTRAINT_NAME": "enderecos_cliente_id_foreign",
+      "REFERENCED_TABLE_NAME": "clientes",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "estoques",
+      "COLUMN_NAME": "produto_id",
+      "CONSTRAINT_NAME": "estoques_produto_id_foreign",
+      "REFERENCED_TABLE_NAME": "produtos",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "estoques",
+      "COLUMN_NAME": "valor_variacao_id",
+      "CONSTRAINT_NAME": "estoque_valor_variacao_id",
+      "REFERENCED_TABLE_NAME": "valores_variacoes",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "imagens_produtos",
+      "COLUMN_NAME": "produto_id",
+      "CONSTRAINT_NAME": "imagens_produtos_produto_id_foreign",
+      "REFERENCED_TABLE_NAME": "produtos",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "instagram_accounts",
+      "COLUMN_NAME": "empresa_id",
+      "CONSTRAINT_NAME": "instagram_accounts_empresa_id_foreign",
+      "REFERENCED_TABLE_NAME": "empresa",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "instagram_posts",
+      "COLUMN_NAME": "empresa_id",
+      "CONSTRAINT_NAME": "instagram_posts_empresa_id_foreign",
+      "REFERENCED_TABLE_NAME": "empresa",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "pedidos",
+      "COLUMN_NAME": "cliente_id",
+      "CONSTRAINT_NAME": "pedidos_cliente_id_foreign",
+      "REFERENCED_TABLE_NAME": "clientes",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "pedidos",
+      "COLUMN_NAME": "cupom_id",
+      "CONSTRAINT_NAME": "pedidos_cupons_id",
+      "REFERENCED_TABLE_NAME": "cupons",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "pedidos",
+      "COLUMN_NAME": "parceiro_id",
+      "CONSTRAINT_NAME": "pedidos_parceiro_id_foreign",
+      "REFERENCED_TABLE_NAME": "parceiros",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "produtos",
+      "COLUMN_NAME": "categoria_id",
+      "CONSTRAINT_NAME": "produtos_categoria_id_foreign",
+      "REFERENCED_TABLE_NAME": "categorias",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "produtos",
+      "COLUMN_NAME": "marca_id",
+      "CONSTRAINT_NAME": "prudots_marca_id",
+      "REFERENCED_TABLE_NAME": "marcas",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "produtos_3d",
+      "COLUMN_NAME": "produto_id",
+      "CONSTRAINT_NAME": "produtos_3d_produtos_FK",
+      "REFERENCED_TABLE_NAME": "produtos",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "produtos_pedidos",
+      "COLUMN_NAME": "estoque_id",
+      "CONSTRAINT_NAME": "produtos_pedidos_estoque_id_foreign",
+      "REFERENCED_TABLE_NAME": "estoques",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "produtos_pedidos",
+      "COLUMN_NAME": "pedido_id",
+      "CONSTRAINT_NAME": "produtos_pedidos_pedido_id_foreign",
+      "REFERENCED_TABLE_NAME": "pedidos",
+      "REFERENCED_COLUMN_NAME": "id"
+    },
+    {
+      "TABLE_NAME": "produtos_pedidos",
+      "COLUMN_NAME": "produto_id",
+      "CONSTRAINT_NAME": "produtos_pedidos_produto_id_foreign",
+      "REFERENCED_TABLE_NAME": "produtos",
+      "REFERENCED_COLUMN_NAME": "id"
+    }
+  ]
+}
