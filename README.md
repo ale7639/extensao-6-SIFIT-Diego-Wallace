@@ -17,14 +17,15 @@ O manual está na pasta [manual-sifit](manual-sifit/MANUAL.md).
 | --- | --- |
 | Manual de uso | [manual-sifit/MANUAL.md](manual-sifit/MANUAL.md) |
 | Prints das telas | [manual-sifit/evidencias/prints](manual-sifit/evidencias/prints) |
-| Vídeo de uso | [manual-sifit/evidencias/video/manual-sifit-telas.webm](manual-sifit/evidencias/video/manual-sifit-telas.webm) |
+| Vídeo de uso (player) | [Abrir o vídeo](https://ale7639.github.io/extensao-6-SIFIT-Diego-Wallace/manual-sifit/evidencias/video/assistir.html) |
+| Prints do banco | [manual-sifit/evidencias/banco](manual-sifit/evidencias/banco) |
 | O que o MySQL da aula contém | [manual-sifit/docs/banco/schema.md](manual-sifit/docs/banco/schema.md) |
 
 ## Link do vídeo no Google Drive
 
 `COLOCAR_LINK_DO_GOOGLE_DRIVE`
 
-O vídeo também está no repositório. O material da aula pede uma cópia no Drive.
+O arquivo solto no GitHub não abre no visualizador. O link que funciona é a página com player: [assistir o vídeo](https://ale7639.github.io/extensao-6-SIFIT-Diego-Wallace/manual-sifit/evidencias/video/assistir.html). O material da aula pede também uma cópia no Drive.
 
 ## Como usar este material
 

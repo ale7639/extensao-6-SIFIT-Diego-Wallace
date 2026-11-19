@@ -55,6 +55,18 @@ Resultado do passo 5, medido em 19/11/2026:
 
 A listagem de alunos do SIFIT, na mesma data, mostra centenas de códigos (a tela de Clientes indica 151 cadastrados, com códigos na casa de 440). Esses registros não estão no MySQL do slide. A evidência de persistência do SIFIT, portanto, é a API autenticada documentada em cada função. O dicionário completo do MySQL da aula está em [docs/banco/schema.md](docs/banco/schema.md).
 
+Prints da consulta somente leitura, gravados em `evidencias/banco/`:
+
+![Conexão e lista de tabelas](evidencias/banco/01-conexao-e-tabelas.png)
+
+![Contagem real das tabelas principais](evidencias/banco/02-contagem-real.png)
+
+![Colunas da tabela clientes, sem dados pessoais](evidencias/banco/03-colunas-clientes.png)
+
+![Conteúdo da tabela grupos neste schema](evidencias/banco/04-grupos-da-loja.png)
+
+O resultado inteiro da consulta está em `evidencias/banco/05-resultado-completo.png`.
+
 Chamadas comuns a quase toda tela, além da função em si:
 
 - `POST /api/verifica-token-logado`
@@ -63,7 +75,7 @@ Chamadas comuns a quase toda tela, além da função em si:
 - `GET /api/posts/tela-web/1`
 - `GET /api/denuncias/tela-web/1`
 
-O vídeo em `evidencias/video/` percorre as mesmas telas na ordem dos prints.
+O vídeo abre nesta página, com player: [assistir o vídeo](https://ale7639.github.io/extensao-6-SIFIT-Diego-Wallace/manual-sifit/evidencias/video/assistir.html). O arquivo `evidencias/video/manual-sifit-telas.mp4` é a mesma gravação. Ele percorre as telas na ordem dos prints.
 
 ## 3. Acesso
 
@@ -1081,7 +1093,7 @@ Os prints `42` a `52` são os formulários e os cadastros de apoio citados nas s
 
 ## 14. Vídeo
 
-O arquivo `evidencias/video/manual-sifit-telas.webm` percorre, nesta ordem:
+A gravação abre em [assistir o vídeo](https://ale7639.github.io/extensao-6-SIFIT-Diego-Wallace/manual-sifit/evidencias/video/assistir.html) e percorre, nesta ordem:
 
 1. Login
 2. Cada item do menu, de Página Inicial até Aplicativo
