@@ -1,0 +1,1423 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<title>Manual do sistema SIFIT</title>
+<style>
+@page { size: A4; margin: 18mm 16mm; }
+:root { color-scheme: light; }
+html { font-size: 11pt; }
+body {
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  color: #1a1a1a;
+  line-height: 1.45;
+  max-width: 100%;
+}
+h1 { font-size: 1.8rem; margin: 0 0 0.6em; border-bottom: 2px solid #0b5fff; padding-bottom: 0.3em; }
+h2 { font-size: 1.35rem; margin: 1.6em 0 0.5em; border-bottom: 1px solid #d0d7de; padding-bottom: 0.2em; page-break-after: avoid; }
+h3 { font-size: 1.1rem; margin: 1.2em 0 0.4em; page-break-after: avoid; }
+h4 { font-size: 1rem; margin: 1em 0 0.35em; page-break-after: avoid; }
+p, li { orphans: 3; widows: 3; }
+table { border-collapse: collapse; width: 100%; margin: 0.8em 0; font-size: 0.92rem; page-break-inside: avoid; }
+th, td { border: 1px solid #c9d1d9; padding: 6px 8px; text-align: left; vertical-align: top; }
+th { background: #f6f8fa; }
+code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.85em; }
+code { background: #f6f8fa; padding: 0.1em 0.35em; border-radius: 4px; }
+pre { background: #f6f8fa; padding: 10px; border-radius: 6px; overflow-x: auto; white-space: pre-wrap; }
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0.8em auto;
+  border: 1px solid #d0d7de;
+  border-radius: 4px;
+  page-break-inside: avoid;
+}
+a { color: #0969da; text-decoration: none; }
+blockquote { border-left: 3px solid #0b5fff; margin: 0.8em 0; padding: 0.2em 0.8em; color: #444; }
+ul, ol { padding-left: 1.3em; }
+hr { border: none; border-top: 1px solid #d0d7de; margin: 1.5em 0; }
+.cover { margin-bottom: 1.5em; }
+.meta { color: #555; margin-bottom: 1em; }
+</style>
+</head>
+<body>
+<h1>Manual do sistema SIFIT</h1>
+<p><strong>SIFIT — Sistema para Academias</strong><br />
+Extensão em Qualidade de Software · 2º bimestre · trabalho em grupo (até 4 pontos)</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dupla</td>
+<td>Diego e Wallace</td>
+</tr>
+<tr>
+<td>Professor</td>
+<td>Adnys Lougan</td>
+</tr>
+<tr>
+<td>Ambiente</td>
+<td>https://sifit.centrion.com.br</td>
+</tr>
+<tr>
+<td>Perfil usado</td>
+<td>Administrador (usuário da aula, nome exibido: Jair)</td>
+</tr>
+<tr>
+<td>Data</td>
+<td>19 de novembro de 2026</td>
+</tr>
+<tr>
+<td>API</td>
+<td>https://backendsifit.centrion.com.br/api/</td>
+</tr>
+<tr>
+<td>Unidade na URL</td>
+<td>o sufixo <code>/1</code> nas rotas é o código da academia logada</td>
+</tr>
+</tbody>
+</table>
+<p>Nenhum cadastro foi salvo, alterado ou excluído. Os formulários foram abertos só para documentar campos. As senhas do slide não entram neste manual.</p>
+<h2>1. O que este manual cobre</h2>
+<p>O SIFIT é o sistema web da academia. O menu lateral organiza a operação em nove blocos:</p>
+<ol>
+<li>Principal — página inicial, dashboard e presenças</li>
+<li>Operação da academia — clientes, matrículas, avaliações e contas</li>
+<li>Treinamento — ficha, exercícios, grupos musculares, objetivos, grupos e turmas</li>
+<li>Financeiro — caixas, Pagar.me, despesas fixas e relatórios</li>
+<li>Comercial — prospecção, planos, contratos, tipos de pagamento e bandeiras</li>
+<li>Gestão — colaboradores, funções, fornecedores, documentos, atividades, pontuação, produtos e enquetes</li>
+<li>Saúde — anamnese (fichas, modelos, categorias e perguntas)</li>
+<li>Inteligência — automações e resultados</li>
+<li>Configurações — parâmetros da academia, modelo de ficha e aplicativo</li>
+</ol>
+<p>Cada funcionalidade abaixo traz objetivo, caminho, passo a passo, campos, print e a chamada que a tela faz até a persistência.</p>
+<h2>2. Como a tela chega ao banco</h2>
+<p>O fluxo observado em todas as telas autenticadas é o mesmo:</p>
+<ol>
+<li>O navegador abre a rota do SIFIT (aplicação Vue em <code>sifit.centrion.com.br</code>).</li>
+<li>A tela confirma a sessão com <code>POST /api/verifica-token-logado</code>.</li>
+<li>A tela pede os dados da função em <code>https://backendsifit.centrion.com.br/api/.../1</code>.</li>
+<li>A API responde JSON. Esse JSON é o contrato do que o backend grava e lê.</li>
+<li>O MySQL informado na aula foi aberto em seguida, só para leitura.</li>
+</ol>
+<p>Resultado do passo 5, medido em 19/11/2026:</p>
+<table>
+<thead>
+<tr>
+<th>Verificação</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Schema</td>
+<td><code>u339572246_alfa1</code></td>
+</tr>
+<tr>
+<td>Tabelas</td>
+<td>43</td>
+</tr>
+<tr>
+<td>Tabelas com nome de matrícula, presença, treino, caixa ou avaliação</td>
+<td>nenhuma</td>
+</tr>
+<tr>
+<td><code>clientes</code> nesse MySQL</td>
+<td>1 registro, maior <code>id</code> 433</td>
+</tr>
+<tr>
+<td><code>produtos</code></td>
+<td>1 registro</td>
+</tr>
+<tr>
+<td><code>pedidos</code></td>
+<td>0</td>
+</tr>
+<tr>
+<td>Conteúdo real do schema</td>
+<td>loja virtual (marcas, banners, artigos, grupos como "Placas de Vídeo", categorias como "Notebook Gamer")</td>
+</tr>
+</tbody>
+</table>
+<p>A listagem de alunos do SIFIT, na mesma data, mostra centenas de códigos (a tela de Clientes indica 151 cadastrados, com códigos na casa de 440). Esses registros não estão no MySQL do slide. A evidência de persistência do SIFIT, portanto, é a API autenticada documentada em cada função. Cada tabela do MySQL da aula tem o próprio print em <code>evidencias/banco/tabelas</code>.</p>
+<p>Prints visuais da consulta somente leitura, no mesmo formato das telas do sistema, gravados em <code>evidencias/banco/</code>:</p>
+<p><img alt="Conexão e lista de tabelas" src="file:///workspace/manual-sifit/evidencias/banco/01-conexao-e-tabelas.png" /></p>
+<p><img alt="Contagem real das tabelas principais" src="file:///workspace/manual-sifit/evidencias/banco/02-contagem-real.png" /></p>
+<p><img alt="Colunas da tabela clientes, sem dados pessoais" src="file:///workspace/manual-sifit/evidencias/banco/03-colunas-clientes.png" /></p>
+<p><img alt="Conteúdo da tabela grupos neste schema" src="file:///workspace/manual-sifit/evidencias/banco/04-grupos-da-loja.png" /></p>
+<p>As categorias e as marcas desse schema estão em <code>evidencias/banco/05-resultado-completo.png</code>. Cada uma das 43 tabelas do MySQL tem o próprio print em <a href="file:///workspace/manual-sifit/evidencias/banco/tabelas">evidencias/banco/tabelas</a>.</p>
+<p>Chamadas comuns a quase toda tela, além da função em si:</p>
+<ul>
+<li><code>POST /api/verifica-token-logado</code></li>
+<li><code>POST /api/usuario/tema/buscar</code></li>
+<li><code>GET /api/onboarding</code></li>
+<li><code>GET /api/posts/tela-web/1</code></li>
+<li><code>GET /api/denuncias/tela-web/1</code></li>
+</ul>
+<p>Os vídeos abrem nesta página, com um player para cada parte: <a href="https://ale7639.github.io/extensao-6-SIFIT-Diego-Wallace/manual-sifit/evidencias/video/assistir.html">assistir os vídeos</a>. O percurso completo continua em <code>evidencias/video/manual-sifit-telas.mp4</code>.</p>
+<h2>3. Acesso</h2>
+<h3>3.1 Login</h3>
+<p>Objetivo: autenticar o usuário e abrir a academia.</p>
+<p>Caminho: https://sifit.centrion.com.br/login</p>
+<p>Passo a passo:</p>
+<ol>
+<li>Abrir a URL de login.</li>
+<li>Informar o login no campo <strong>Login</strong>.</li>
+<li>Informar a senha no campo <strong>Senha</strong>.</li>
+<li>Opcional: marcar <strong>Manter conectado</strong>.</li>
+<li>Clicar em <strong>Entrar</strong>.</li>
+<li>O sistema redireciona para <code>/dashboard</code> e exibe a saudação com o nome do usuário.</li>
+</ol>
+<p>Há também o link <strong>Esqueci minha senha</strong>.</p>
+<p>Evidência:</p>
+<p><img alt="Tela de login do SIFIT" src="file:///workspace/manual-sifit/evidencias/prints/01-login.png" /></p>
+<p>Persistência: a sessão passa a ser validada por <code>POST /api/verifica-token-logado</code> nas telas seguintes. O tema do usuário é lido em <code>POST /api/usuario/tema/buscar</code>.</p>
+<h3>3.2 Tema e sessão</h3>
+<p>No topo de cada tela interna existem <strong>Claro</strong>, <strong>Escuro</strong>, o sino de notificações e o menu do usuário (nome, perfil Administrador e <strong>Sair</strong>). O tema escolhido é gravado pela API de tema do usuário.</p>
+<h2>4. Principal</h2>
+<h3>4.1 Página inicial</h3>
+<p>Objetivo: resumir o dia da academia e sugerir ações.</p>
+<p>Caminho: menu <strong>Principal → Página Inicial</strong> (<code>/dashboard</code>).</p>
+<p>Passo a passo:</p>
+<ol>
+<li>Entrar no sistema.</li>
+<li>A página abre já selecionada.</li>
+<li>Ajustar o período nos dois campos de data e clicar em <strong>Buscar</strong>, se quiser outro intervalo. No levantamento o período exibido era 01/11/2026 a 30/11/2026.</li>
+<li>Ler os cartões: alunos em risco, valor em aberto, pico de movimento, clientes ativos, ausentes, sem matrícula, matrículas no período, desistências e renovações.</li>
+<li>Na faixa <strong>Inteligência de Retenção</strong>, ver alto, médio e baixo risco e o motivo principal (no dia, ausência prolongada).</li>
+<li>Usar as ações do dia: cobrar alunos em aberto, falar com inativos ou ver avaliações.</li>
+<li>Mais abaixo estão frequência por horário e por dia da semana, mensalidades pendentes, agenda, últimas entradas e aniversariantes.</li>
+</ol>
+<p>Evidência:</p>
+<p><img alt="Página inicial" src="file:///workspace/manual-sifit/evidencias/prints/02-pagina-inicial.png" /></p>
+<p>Persistência (exemplos capturados nesta tela):</p>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>Caminho</th>
+<th>Uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td><code>/api/dashboard/retencao/1</code></td>
+<td>risco e saúde da retenção</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/api/dados-principais-home/1</code></td>
+<td>indicadores do período</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/api/presencas/1</code></td>
+<td>entradas</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/api/horarios-entrada-alunos/1</code></td>
+<td>pico por horário</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/api/porcentagem-frequencias/1</code></td>
+<td>frequência</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/api/clientes/maiores-presencas/1</code></td>
+<td>quem mais treinou</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/api/listar-ultimas-avaliacoes/1</code></td>
+<td>avaliações recentes</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/api/turma/listar/1</code></td>
+<td>agenda</td>
+</tr>
+</tbody>
+</table>
+<p>Os números da tela (por exemplo 33 ativos, 33 ausentes, 27 sem matrícula, R$ 122,00 em aberto) são a resposta dessas chamadas, não linhas do MySQL <code>u339572246_alfa1</code>.</p>
+<h3>4.2 Dashboard analítico</h3>
+<p>Objetivo: gráficos de gestão, separados da página inicial operacional.</p>
+<p>Caminho: menu <strong>Principal → Dashboard</strong> (<code>/dash</code>).</p>
+<p>Passo a passo:</p>
+<ol>
+<li>Abrir <strong>Dashboard</strong>.</li>
+<li>A tela mostra despesas fixas e o bloco <strong>Inteligência Sifit</strong>, com atalho <strong>Ver Inteligência</strong>.</li>
+<li>Os gráficos consultam presença por dia, faixa etária, sexo, matrículas canceladas por mês e avaliações por mês.</li>
+</ol>
+<p>Evidência:</p>
+<p><img alt="Dashboard analítico" src="file:///workspace/manual-sifit/evidencias/prints/03-dashboard.png" /></p>
+<p>Persistência:</p>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>Caminho</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>POST</td>
+<td><code>/api/presenca-por-dia/1</code></td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/api/pessoas-faixa-etaria/1</code></td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/api/percentual-sexo/1</code></td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/api/matriculas-canceladas-por-mes/1</code></td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/api/avaliacoes-por-mes/1</code></td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/api/inteligencia/resultados/1</code></td>
+</tr>
+</tbody>
+</table>
+<h3>4.3 Presenças</h3>
+<p>Objetivo: consultar quem entrou na academia em um intervalo.</p>
+<p>Caminho: menu <strong>Principal → Presenças</strong> (<code>/presencas</code>).</p>
+<p>Passo a passo:</p>
+<ol>
+<li>Abrir <strong>Presenças</strong>.</li>
+<li>Preencher <strong>DE</strong> e <strong>ATÉ</strong>.</li>
+<li>A lista é paginada pela API de presenças.</li>
+</ol>
+<p>Evidência:</p>
+<p><img alt="Presenças" src="file:///workspace/manual-sifit/evidencias/prints/04-presencas.png" /></p>
+<p>Persistência: <code>POST /api/presencas/paginacao/1</code>.</p>
+<p>O registro de presença em si nasce da catraca, da biometria ou do controle configurado em <strong>Configurações</strong> (campo <strong>Controle de Presença</strong>). Esta tela é a consulta.</p>
+<h2>5. Operação da academia</h2>
+<h3>5.1 Clientes</h3>
+<p>Objetivo: cadastrar e localizar alunos.</p>
+<p>Caminho: menu <strong>Operação da academia → Clientes</strong> (<code>/clientes</code>).</p>
+<p>Passo a passo da consulta:</p>
+<ol>
+<li>Abrir <strong>Clientes</strong>.</li>
+<li>Filtrar por código, nome, status, situação, plano e personal.</li>
+<li>Clicar em <strong>Buscar</strong>.</li>
+<li>A tabela mostra código, nome, plano, status e biometria / última visita.</li>
+<li>Os cartões acima da tabela resumem cadastrados, ativos, sem matrícula e ausentes. No levantamento: 151 cadastrados, 33 ativos, 27 sem matrícula e 0 ausentes no filtro que estava na tela.</li>
+<li>Usar <strong>Anterior</strong> / <strong>Próxima</strong> para paginar.</li>
+</ol>
+<p>Passo a passo do cadastro (formulário aberto, não enviado):</p>
+<ol>
+<li>Clicar em <strong>Novo Cliente</strong> ou abrir <code>/adicionar-cliente</code>.</li>
+<li>Preencher identificação: nome, status, sexo, data de nascimento e tipo sanguíneo. O código é gerado pelo sistema.</li>
+<li>Documentos: CPF e RG.</li>
+<li>Foto (JPG, PNG ou GIF).</li>
+<li>Contato: telefone, celular / WhatsApp, contato de emergência e e-mail.</li>
+<li>Endereço, começando pelo CEP. País, estado e cidade vêm da API.</li>
+<li>Clicar em <strong>Cadastrar Cliente</strong> para gravar, ou <strong>Cancelar</strong> para voltar. Nesta evidência usamos <strong>Cancelar</strong>.</li>
+</ol>
+<p>Evidências:</p>
+<p><img alt="Lista de clientes" src="file:///workspace/manual-sifit/evidencias/prints/05-clientes.png" /></p>
+<p><img alt="Formulário de cliente" src="file:///workspace/manual-sifit/evidencias/prints/42-form-cliente.png" /></p>
+<p>Persistência:</p>
+<table>
+<thead>
+<tr>
+<th>Ação</th>
+<th>Método</th>
+<th>Caminho</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lista e totais</td>
+<td>GET</td>
+<td><code>/api/clientes/tela-web/1</code></td>
+</tr>
+<tr>
+<td>Página da tabela</td>
+<td>POST</td>
+<td><code>/api/clientes-paginacao/1</code></td>
+</tr>
+<tr>
+<td>Total</td>
+<td>GET</td>
+<td><code>/api/total-clientes/1</code></td>
+</tr>
+<tr>
+<td>Planos do filtro</td>
+<td>GET</td>
+<td><code>/api/planos/1</code></td>
+</tr>
+<tr>
+<td>Personais do filtro</td>
+<td>GET</td>
+<td><code>/api/colaboradores-personais/1</code></td>
+</tr>
+<tr>
+<td>País, estado e cidade do formulário</td>
+<td>POST</td>
+<td><code>/api/paises</code>, <code>/api/estados</code>, <code>/api/cidades/16</code></td>
+</tr>
+<tr>
+<td>Gravação (não executada)</td>
+<td>POST</td>
+<td><code>/api/cadastrar-cliente/1</code></td>
+</tr>
+</tbody>
+</table>
+<p>O código exibido na grade é a chave do aluno na API. Esse código não foi encontrado como cadastro de academia no MySQL do slide: lá <code>clientes</code> tem um único registro de loja e não há colunas de plano, biometria ou matrícula.</p>
+<h3>5.2 Matrículas</h3>
+<p>Objetivo: vincular o aluno a um plano, com vigência, valor e vencimento.</p>
+<p>Caminho: menu <strong>Operação da academia → Matrículas</strong> (<code>/matriculas</code>).</p>
+<p>Passo a passo da consulta:</p>
+<ol>
+<li>Abrir <strong>Matrículas</strong>.</li>
+<li>Filtrar por código e nome.</li>
+<li>Clicar em <strong>Buscar</strong>.</li>
+<li>A tabela mostra código, nome, plano e status.</li>
+<li>Os indicadores da tela vêm de matrículas do mês, recorrentes, ativas e não renovadas.</li>
+</ol>
+<p>Passo a passo do cadastro (formulário aberto, não enviado), em <code>/adicionar-matricula</code>:</p>
+<ol>
+<li>Clicar em <strong>Cadastrar Matrícula</strong>.</li>
+<li>Conferir quem cadastrou, a data e o status.</li>
+<li>Localizar o aluno (código e nome).</li>
+<li>Escolher modalidade / plano, data inicial, data final, pagamento pelo sistema, tipo de pagamento, taxa de matrícula, dia de vencimento e valor da parcela.</li>
+<li>A configuração da academia decide se, ao concluir, o sistema pergunta sobre anamnese.</li>
+<li>Salvar somente quando o dado for real. Nesta evidência o formulário não foi enviado.</li>
+</ol>
+<p>Na lista também existe <strong>Cancelar Matrícula</strong>, com campo <strong>Motivo de Cancelamento</strong>. Não foi usado.</p>
+<p>Evidências:</p>
+<p><img alt="Lista de matrículas" src="file:///workspace/manual-sifit/evidencias/prints/06-matriculas.png" /></p>
+<p><img alt="Formulário de matrícula" src="file:///workspace/manual-sifit/evidencias/prints/43-form-matricula.png" /></p>
+<p>Persistência:</p>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>Caminho</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>POST</td>
+<td><code>/api/matriculas/paginacao/1</code></td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/api/qtd-matricula-mes-atual/1</code></td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/api/qtd-matriculas-ativas/1</code></td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/api/qtd-matriculas-nao-renovadas/1</code></td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/api/matriculas/qtd-recorrente/1</code></td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/api/planos/1</code></td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/api/tipo-pagamento/1</code></td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/api/configuracoes/1</code></td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/api/salvar/matricula/</code> (gravação, não executada)</td>
+</tr>
+<tr>
+<td>—</td>
+<td><code>/api/cancelar-matricula/</code> (cancelamento, não executado)</td>
+</tr>
+</tbody>
+</table>
+<h3>5.3 Avaliações físicas</h3>
+<p>Objetivo: registrar e comparar medidas do aluno.</p>
+<p>Caminho: menu <strong>Operação da academia → Avaliações</strong> (<code>/avaliacoes</code>).</p>
+<p>Passo a passo:</p>
+<ol>
+<li>Abrir <strong>Avaliações</strong>.</li>
+<li>Filtrar por código, nome e status e clicar em <strong>Buscar</strong>.</li>
+<li>A tabela mostra código, nome, data / hora, personal, status e ações.</li>
+<li>As ações abrem a ficha da avaliação, a comparação entre avaliações e a alteração de data / hora.</li>
+<li>No cadastro (<code>/adicionar-avaliacao</code>), informar o aluno, o personal, a data, a hora e o tipo de pesquisa.</li>
+<li>A ficha de medidas, visível no modal da lista, inclui idade, altura, peso, IMC, pescoço, ombros, tórax, braços, antebraços e abdômen, além das abas <strong>IMC</strong>, <strong>Circunferência</strong>, <strong>Teste Físico</strong> e <strong>Composição Corporal</strong>.</li>
+</ol>
+<p>Evidências:</p>
+<p><img alt="Lista de avaliações" src="file:///workspace/manual-sifit/evidencias/prints/07-avaliacoes.png" /></p>
+<p><img alt="Cadastro de avaliação" src="file:///workspace/manual-sifit/evidencias/prints/44-form-avaliacao.png" /></p>
+<p>Persistência:</p>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>Caminho</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td><code>/api/avaliacao/tela-web/1</code></td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/api/listar-ultimas-avaliacoes/1</code></td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/api/qtd-avaliacoes/1</code></td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/api/colaboradores-avaliadores/1</code></td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/api/avaliacao/salvarFeita/</code> (gravação, não executada)</td>
+</tr>
+</tbody>
+</table>
+<h3>5.4 Contas a receber</h3>
+<p>Objetivo: lançar e acompanhar o que o aluno deve à academia.</p>
+<p>Caminho: menu <strong>Operação da academia → Contas a Receber</strong> (<code>/contas-receber</code>).</p>
+<p>Passo a passo:</p>
+<ol>
+<li>Abrir <strong>Contas a Receber</strong>.</li>
+<li>Filtrar por código, nome, tipo de data, data inicial, data final e status.</li>
+<li>A tabela mostra código, cliente, título, valor a receber, valor recebido e status.</li>
+<li>Em <strong>Nova Conta</strong> (<code>/adicionar-conta-receber</code>), informar cliente, título, se cria cópias, valor, moeda, vencimento, observação e o caixa aberto.</li>
+<li>Receber uma conta é outra ação da lista (<code>/api/conta-receber/receber/</code>). Não foi executada.</li>
+</ol>
+<p>Evidências:</p>
+<p><img alt="Contas a receber" src="file:///workspace/manual-sifit/evidencias/prints/08-contas-receber.png" /></p>
+<p><img alt="Nova conta a receber" src="file:///workspace/manual-sifit/evidencias/prints/45-form-conta-receber.png" /></p>
+<p>Persistência:</p>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>Caminho</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>POST</td>
+<td><code>/api/contas-receber/tela-web/1</code></td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/api/contas-receber/por-data/1</code></td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/api/contas-receber/vencidas/1</code></td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/api/local-contas/1</code></td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/api/tipo-pagamento/1</code></td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/api/empresa/moedas/1</code></td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/api/seleciona/caixa-aberto/1</code></td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/api/cadastrar-conta-receber/</code> (gravação, não executada)</td>
+</tr>
+</tbody>
+</table>
+<p>No dia do levantamento a página inicial mostrava R$ 122,00 em aberto, lido dessa mesma base de contas.</p>
+<h3>5.5 Contas a pagar</h3>
+<p>Objetivo: controlar despesas com fornecedor ou colaborador.</p>
+<p>Caminho: menu <strong>Operação da academia → Contas a Pagar</strong> (<code>/contas-pagar</code>).</p>
+<p>Passo a passo:</p>
+<ol>
+<li>Abrir <strong>Contas a Pagar</strong>.</li>
+<li>Filtrar por código, nome, tipo de data, período e status.</li>
+<li>A tabela mostra código, fornecedor / colaborador, título, valor a pagar, valor pago e status.</li>
+<li>Em <strong>Nova Conta</strong>, informar tipo, tipo de despesa, status, título, fornecedor ou colaborador, documento, data de emissão, categoria, valor e vencimento.</li>
+</ol>
+<p>Evidências:</p>
+<p><img alt="Contas a pagar" src="file:///workspace/manual-sifit/evidencias/prints/09-contas-pagar.png" /></p>
+<p><img alt="Nova conta a pagar" src="file:///workspace/manual-sifit/evidencias/prints/46-form-conta-pagar.png" /></p>
+<p>Persistência:</p>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>Caminho</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>POST</td>
+<td><code>/api/contas-pagar/por-data/1</code></td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/api/contas-pagar/qtd-vencidas/1</code></td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/api/tipos-documento/1</code></td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/api/despesas-fixas/1</code></td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/api/categoria-contas-pagar/1</code></td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/api/cadastrar-conta-pagar/</code> (gravação, não executada)</td>
+</tr>
+</tbody>
+</table>
+<h3>5.6 Ficha de treino</h3>
+<p>Objetivo: montar o treino do aluno, com período, objetivo e exercícios.</p>
+<p>Caminho: menu <strong>Treinamento → Ficha de Treino</strong> (<code>/fichas-treino</code>).</p>
+<p>Passo a passo:</p>
+<ol>
+<li>Abrir <strong>Ficha de Treino</strong>.</li>
+<li>Filtrar por código, nome do aluno e status.</li>
+<li>A tabela mostra código, aluno, data inicial, data final, status e ações.</li>
+<li><strong>Cadastrar Ficha</strong> abre o formulário com personal, datas, objetivo e observação. A rota direta <code>/adicionar-ficha-treino</code> voltou para a lista; o cadastro usado na interface é o botão da própria lista.</li>
+<li>A montagem dos exercícios usa a biblioteca de <strong>Exercícios</strong> e pode partir de um <strong>Modelo de Ficha</strong>.</li>
+</ol>
+<p>Evidência:</p>
+<p><img alt="Fichas de treino" src="file:///workspace/manual-sifit/evidencias/prints/10-ficha-treino.png" /></p>
+<p>Persistência:</p>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>Caminho</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td><code>/api/fichas/1</code></td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/api/objetivos-treino/1</code></td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/api/colaboradores-avaliadores/1</code></td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/api/salvar-treinos-ficha/</code> (gravação da montagem, não executada)</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/api/adicionar-ficha/</code> (gravação, não executada)</td>
+</tr>
+</tbody>
+</table>
+<h2>6. Treinamento</h2>
+<h3>6.1 Exercícios</h3>
+<p>Objetivo: manter a biblioteca de exercícios usada nas fichas.</p>
+<p>Caminho: menu <strong>Treinamento → Exercícios</strong> (<code>/exercicios</code>).</p>
+<p>Passo a passo:</p>
+<ol>
+<li>Abrir <strong>Exercícios</strong>.</li>
+<li>A tela agrupa os exercícios por grupo muscular. No levantamento apareceram grupos já cadastrados na academia (bíceps, pernas, peitoral e grupos de teste).</li>
+<li><strong>Adicionar</strong> abre o formulário com código, nome, tipo de membro e imagem.</li>
+<li><strong>Salvar</strong> grava; <strong>Cancelar</strong> fecha. Nada foi salvo.</li>
+</ol>
+<p>Evidência:</p>
+<p><img alt="Exercícios" src="file:///workspace/manual-sifit/evidencias/prints/11-exercicios.png" /></p>
+<p>Persistência: <code>POST /api/grupo-muscular/1</code> carrega os grupos. A inclusão usa <code>POST /api/cria/exercicios/</code> e a importação da biblioteca usa <code>POST /api/importa/biblioteca-exercicios/</code>. Nenhuma das duas gravações foi executada.</p>
+<h3>6.2 Grupos musculares</h3>
+<p>Objetivo: classificar exercícios por região do corpo.</p>
+<p>Caminho: menu <strong>Treinamento → Grupos Musculares</strong> (<code>/grupos-musculares</code>).</p>
+<p>Passo a passo:</p>
+<ol>
+<li>Abrir a lista.</li>
+<li>Filtrar por código e nome.</li>
+<li>A tabela mostra código, nome, tipo de membro, imagem e ações.</li>
+<li>O formulário pede código, nome, tipo de membro e imagem.</li>
+</ol>
+<p>Evidência:</p>
+<p><img alt="Grupos musculares" src="file:///workspace/manual-sifit/evidencias/prints/12-grupos-musculares.png" /></p>
+<p>Persistência: <code>POST /api/grupo-muscular/1</code>. Criar e editar, não executados, usam <code>/api/web/cria/grupo-muscular/</code> e <code>/api/web/edita/grupo-muscular/</code>.</p>
+<h3>6.3 Objetivos de treino</h3>
+<p>Objetivo: cadastrar objetivos que a ficha pode usar (emagrecimento, hipertrofia etc.).</p>
+<p>Caminho: menu <strong>Treinamento → Objetivos Treino</strong> (<code>/objetivos-treino</code>).</p>
+<p>Passo a passo:</p>
+<ol>
+<li>Abrir a lista e buscar por código ou nome.</li>
+<li>Clicar em <strong>Novo Objetivo</strong>.</li>
+<li>Informar nome e descrição.</li>
+<li><strong>Salvar</strong> ou <strong>Cancelar</strong>.</li>
+</ol>
+<p>Evidência:</p>
+<p><img alt="Objetivos de treino" src="file:///workspace/manual-sifit/evidencias/prints/13-objetivos-treino.png" /></p>
+<p>Persistência: <code>GET /api/objetivos-treino/1</code>.</p>
+<h3>6.4 Grupos</h3>
+<p>Objetivo: cadastrar grupos da academia (modalidade ou agrupamento comercial), com opção de aparecer na home e tipo de caixa.</p>
+<p>Caminho: menu <strong>Treinamento → Grupos</strong> (<code>/grupos</code>).</p>
+<p>Esse <strong>Grupos</strong> é o grupo da academia no SIFIT. Não é a tabela <code>grupos</code> do MySQL da aula, cujos nomes são categorias de informática (monitores, processadores, placas de vídeo).</p>
+<p>Passo a passo:</p>
+<ol>
+<li>Abrir <strong>Grupos</strong>.</li>
+<li>A tabela mostra código, nome, descrição, mostrar home, tipo de caixa, status e ações.</li>
+<li>Em <strong>Novo Grupo</strong>, informar nome, status, mostrar home, tipo de caixa e descrição.</li>
+<li><strong>Salvar Grupo</strong> grava. Não foi clicado.</li>
+</ol>
+<p>Evidência:</p>
+<p><img alt="Grupos da academia" src="file:///workspace/manual-sifit/evidencias/prints/14-grupos.png" /></p>
+<p>Persistência: <code>GET /api/grupos/1</code>. Gravação não executada: <code>POST /api/adiciona/grupo/</code> e <code>POST /api/edita/grupo/</code>.</p>
+<h3>6.5 Turmas</h3>
+<p>Objetivo: montar a grade de aulas (plano, horário e dias da semana).</p>
+<p>Caminho: menu <strong>Treinamento → Turmas</strong> (<code>/turmas</code>).</p>
+<p>Passo a passo:</p>
+<ol>
+<li>Abrir <strong>Turmas</strong>.</li>
+<li>Buscar por código, nome e status.</li>
+<li>A tabela mostra código, nome da turma, plano, horário, dias e status.</li>
+<li>Em <strong>Cadastrar Turma</strong>, informar nome, status, plano, aula experimental, tempo em meses, hora inicial, hora final, se tem personal e os dias da semana.</li>
+</ol>
+<p>Evidência:</p>
+<p><img alt="Turmas" src="file:///workspace/manual-sifit/evidencias/prints/15-turmas.png" /></p>
+<p>Persistência: <code>GET /api/turma/listar/1</code>, com apoio de <code>GET /api/planos/1</code> e <code>GET /api/colaboradores-personais/1</code>. Criar turma, não executado: <code>POST /api/turma/criar/</code>.</p>
+<h2>7. Financeiro</h2>
+<h3>7.1 Caixas</h3>
+<p>Objetivo: abrir e fechar o caixa do dia e ver o movimento.</p>
+<p>Caminho: menu <strong>Financeiro → Caixas</strong> (<code>/caixas</code>).</p>
+<p>Passo a passo:</p>
+<ol>
+<li>Abrir <strong>Caixas</strong>.</li>
+<li>Filtrar data inicial, data final e status (todos, aberto ou fechado).</li>
+<li>A tabela mostra código, data inicial, data final, status e ações.</li>
+<li><strong>Abrir Caixa</strong> pede funcionário e local de contas.</li>
+<li>O fechamento e a conferência existem na API e não foram executados.</li>
+</ol>
+<p>Evidência:</p>
+<p><img alt="Caixas" src="file:///workspace/manual-sifit/evidencias/prints/16-caixas.png" /></p>
+<p>Persistência: a listagem usa as rotas de caixa da API (<code>/api/caixa/caixas-paginacao/</code> e <code>/api/seleciona/caixa/</code>). Abrir caixa usa <code>POST /api/abrir-caixa/</code>. Nenhuma abertura ou fechamento foi feito neste trabalho.</p>
+<h3>7.2 Pagar.me</h3>
+<p>Objetivo: ver saldo, transações, recebíveis e gerar cobrança pelo gateway.</p>
+<p>Caminho: menu <strong>Financeiro → Pagar.me</strong> (<code>/pagarme</code>).</p>
+<p>Passo a passo:</p>
+<ol>
+<li>Abrir <strong>Pagar.me</strong>.</li>
+<li>Ver saldo disponível e valor em processamento.</li>
+<li>Consultar recebimentos, meios de pagamento, transações recentes e repasses.</li>
+<li>As ações de saque, nova cobrança e configuração existem na tela. Nenhuma movimentação financeira foi disparada.</li>
+</ol>
+<p>Evidência:</p>
+<p><img alt="Pagar.me" src="file:///workspace/manual-sifit/evidencias/prints/17-pagarme.png" /></p>
+<p>Persistência: a tela fala com os endpoints <code>/api/pagarme/transacoes</code>, <code>/api/pagarme/recebiveis</code>, <code>/api/pagarme/relatorio-mes</code> e <code>/api/ver-saldo</code>. Criar cobrança (<code>/api/pagarme/criar-cobranca</code>) e sacar (<code>/api/sacar-saldo</code>) não foram usados.</p>
+<h3>7.3 Despesas fixas</h3>
+<p>Objetivo: cadastrar contas que se repetem (aluguel, internet, energia).</p>
+<p>Caminho: menu <strong>Financeiro → Despesas Fixas</strong> (<code>/despesas-fixas</code>).</p>
+<p>Passo a passo:</p>
+<ol>
+<li>Abrir a lista: código, nome, valor, recorrência, status e ações.</li>
+<li>Em <strong>Nova Despesa</strong>, informar nome, status, valor e recorrência.</li>
+<li><strong>Salvar Despesa</strong> grava. Não foi clicado.</li>
+</ol>
+<p>Evidência:</p>
+<p><img alt="Despesas fixas" src="file:///workspace/manual-sifit/evidencias/prints/18-despesas-fixas.png" /></p>
+<p>Persistência: <code>GET /api/despesas-fixas/1</code>. Gravação não executada: <code>POST /api/cria/despesa-fixa/</code>.</p>
+<h3>7.4 Relatórios</h3>
+<p>Objetivo: exportar listagens por período.</p>
+<p>Caminho: menu <strong>Financeiro → Relatórios</strong> (<code>/relatorios</code>).</p>
+<p>Passo a passo:</p>
+<ol>
+<li>Abrir <strong>Relatórios</strong>.</li>
+<li>Escolher o tipo: avaliações, clientes, colaboradores, matrículas, contas a receber, contas a pagar ou caixas.</li>
+<li>Informar data início e data fim.</li>
+<li>Clicar em <strong>Gerar Relatório</strong>.</li>
+</ol>
+<p>Evidência:</p>
+<p><img alt="Relatórios" src="file:///workspace/manual-sifit/evidencias/prints/19-relatorios.png" /></p>
+<p>Persistência: a geração usa <code>POST /api/relatorio/</code> (e <code>/api/relatorio/caixa-detalhado/</code> quando o caixa é detalhado). O arquivo sai da API; não há tabela de relatório no MySQL do slide.</p>
+<h3>7.5 Cadastros de apoio do financeiro</h3>
+<p>Estes três cadastros sustentam contas e caixa.</p>
+<p><strong>Bancos</strong> (<code>/bancos</code>): código, nome e código do banco. Lista em <code>GET /api/bancos/1</code>.</p>
+<p><img alt="Bancos" src="file:///workspace/manual-sifit/evidencias/prints/50-bancos.png" /></p>
+<p><strong>Local de contas</strong> (<code>/local-contas</code>): código, nome e status. Lista em <code>GET /api/local-contas/1</code>. É o local pedido ao abrir o caixa.</p>
+<p><img alt="Locais de conta" src="file:///workspace/manual-sifit/evidencias/prints/51-local-contas.png" /></p>
+<p><strong>Categorias de conta a pagar</strong> (<code>/categorias-conta-pagar</code>): código e nome. Lista em <code>POST /api/categoria-contas-pagar/1</code>.</p>
+<p><img alt="Categorias de conta a pagar" src="file:///workspace/manual-sifit/evidencias/prints/52-categorias-conta-pagar.png" /></p>
+<h2>8. Comercial</h2>
+<h3>8.1 Prospecção</h3>
+<p>Objetivo: acompanhar leads antes de virarem aluno.</p>
+<p>Caminho: menu <strong>Comercial → Prospecção</strong> (<code>/prospeccao</code>).</p>
+<p>Passo a passo:</p>
+<ol>
+<li>Abrir <strong>Prospecção</strong>.</li>
+<li>Buscar por nome e filtrar o estágio.</li>
+<li>A tabela mostra código, nome, estágio e data de criação.</li>
+<li><strong>Adicionar Lead</strong> pede nome, estágio, e-mail e telefone.</li>
+<li><strong>Salvar Lead</strong> grava. Não foi clicado.</li>
+</ol>
+<p>Evidência:</p>
+<p><img alt="Prospecção" src="file:///workspace/manual-sifit/evidencias/prints/20-prospeccao.png" /></p>
+<p>Persistência: a lista e o quadro de estágios são carregados pela API da própria tela de prospecção. O lead só entra na base se <strong>Salvar Lead</strong> for confirmado.</p>
+<h3>8.2 Planos</h3>
+<p>Objetivo: definir o que a academia vende (nome, valor, duração, parcelas e personal).</p>
+<p>Caminho: menu <strong>Comercial → Planos</strong> (<code>/planos</code>).</p>
+<p>Passo a passo:</p>
+<ol>
+<li>Abrir <strong>Planos</strong>.</li>
+<li>Buscar por código, nome e status.</li>
+<li>A tabela mostra código, nome, quantidade de alunos, valor, duração e status. A tela também destaca os planos com mais alunos.</li>
+<li>Em <strong>Novo Plano</strong>, informar nome, grupo, status, tipo de cobrança, parcelas, valor mensal, valor da matrícula e se tem personal.</li>
+<li>A opção <strong>Salvar também na Pagar.me</strong> replica o plano no gateway. Não foi usada.</li>
+</ol>
+<p>Evidência:</p>
+<p><img alt="Planos" src="file:///workspace/manual-sifit/evidencias/prints/21-planos.png" /></p>
+<p>Persistência: <code>GET /api/planos/1</code>. Gravação não executada: <code>POST /api/plano/salvar/</code>. A cópia no gateway, também não executada, usa <code>/api/planos/pagarme</code>.</p>
+<h3>8.3 Modelos de contrato</h3>
+<p>Objetivo: guardar o texto do contrato usado na matrícula.</p>
+<p>Caminho: menu <strong>Comercial → Modelos Contrato</strong> (<code>/modelos-contrato</code>).</p>
+<p>Passo a passo:</p>
+<ol>
+<li>Abrir a lista (código, nome e status).</li>
+<li>Clicar em <strong>Adicionar Modelo Contrato</strong>.</li>
+<li>O editor do modelo fica em <code>/adicionar-modelo-contrato</code>.</li>
+</ol>
+<p>Evidência:</p>
+<p><img alt="Modelos de contrato" src="file:///workspace/manual-sifit/evidencias/prints/22-modelos-contrato.png" /></p>
+<p>Persistência: <code>GET /api/modelos-contrato/1</code>. Gravação não executada: <code>POST /api/modelo-contrato/salvar/</code>.</p>
+<h3>8.4 Tipos de pagamento</h3>
+<p>Objetivo: cadastrar dinheiro, cartão, PIX e se o pagamento passa pelo sistema.</p>
+<p>Caminho: menu <strong>Comercial → Tipos de Pagamento</strong> (<code>/tipos-pagamento</code>).</p>
+<p>Passo a passo:</p>
+<ol>
+<li>Abrir a lista: código, nome, tipo, via gateway e status.</li>
+<li>Clicar em <strong>Novo</strong>.</li>
+<li>Informar nome, status, se escolhe bandeira, o tipo e se o pagamento é pelo sistema.</li>
+<li><strong>Salvar</strong> grava. Não foi clicado.</li>
+</ol>
+<p>Evidência:</p>
+<p><img alt="Tipos de pagamento" src="file:///workspace/manual-sifit/evidencias/prints/23-tipos-pagamento.png" /></p>
+<p>Persistência: <code>GET /api/tipo-pagamento/1</code>, a mesma lista usada em matrícula e contas.</p>
+<h3>8.5 Bandeiras</h3>
+<p>Objetivo: cadastrar bandeiras de cartão e a taxa por parcela.</p>
+<p>Caminho: menu <strong>Comercial → Bandeiras</strong> (<code>/bandeiras</code>).</p>
+<p>Passo a passo:</p>
+<ol>
+<li>Abrir <strong>Bandeiras de Cartão</strong>.</li>
+<li><strong>Nova Bandeira</strong> pede nome, taxa adicional, taxa de débito e se a taxa adicional multiplica por mês.</li>
+<li><strong>Adicionar Parcela</strong> informa número da parcela e taxa.</li>
+<li>Nada foi salvo.</li>
+</ol>
+<p>Evidência:</p>
+<p><img alt="Bandeiras" src="file:///workspace/manual-sifit/evidencias/prints/24-bandeiras.png" /></p>
+<p>Persistência: listagem e parcelas pelas rotas <code>/api/bandeiras/</code> e <code>/api/parcela-por-bandeiras/</code>. Criar bandeira, não executado: <code>POST /api/cria/bandeira/</code>.</p>
+<h2>9. Gestão</h2>
+<h3>9.1 Colaboradores</h3>
+<p>Objetivo: cadastrar a equipe (recepção, professor, personal, avaliador).</p>
+<p>Caminho: menu <strong>Gestão → Colaboradores</strong> (<code>/colaboradores</code>).</p>
+<p>Passo a passo:</p>
+<ol>
+<li>Buscar por código e nome.</li>
+<li>A tabela mostra código, nome, status e biometria / dias desde a última visita.</li>
+<li><strong>Novo Colaborador</strong> (<code>/adicionar-colaborador</code>) separa os dados em blocos: dados principais, documentos, login (admin, normal ou sem login), contato, endereço, biometria e observação.</li>
+<li><strong>Gerenciar Funções</strong> abre o vínculo da pessoa com uma função.</li>
+<li><strong>Salvar</strong> não foi clicado.</li>
+</ol>
+<p>Evidências:</p>
+<p><img alt="Colaboradores" src="file:///workspace/manual-sifit/evidencias/prints/25-colaboradores.png" /></p>
+<p><img alt="Cadastro de colaborador" src="file:///workspace/manual-sifit/evidencias/prints/48-form-colaborador.png" /></p>
+<p>Persistência: a grade usa as rotas <code>/api/colaboradores/</code>. O salvamento, não executado, é <code>POST /api/salvar/colaborador/</code>.</p>
+<h3>9.2 Funções</h3>
+<p>Objetivo: definir o papel e as permissões de tela.</p>
+<p>Caminho: menu <strong>Gestão → Funções</strong> (<code>/funcoes</code>).</p>
+<p>Passo a passo:</p>
+<ol>
+<li>Buscar a função.</li>
+<li>A tabela mostra código, nome, tipo, se é personal, se é avaliador e ações.</li>
+<li><strong>Nova Função</strong> pede nome, tipo de funcionário, personal e avaliador.</li>
+<li>O bloco <strong>Permissões</strong> marca o que aquele papel pode ver e fazer.</li>
+<li>Nada foi salvo.</li>
+</ol>
+<p>Evidência:</p>
+<p><img alt="Funções" src="file:///workspace/manual-sifit/evidencias/prints/26-funcoes.png" /></p>
+<p>Persistência: <code>GET /api/funcoes-colaborador/</code>. Permissões: <code>GET /api/permissoes-por-funcao/</code> e <code>POST /api/cria/permissoes-funcao/</code> (não executado).</p>
+<h3>9.3 Fornecedores</h3>
+<p>Objetivo: cadastrar quem emite as contas a pagar.</p>
+<p>Caminho: menu <strong>Gestão → Fornecedores</strong> (<code>/fornecedores</code>).</p>
+<p>Passo a passo:</p>
+<ol>
+<li>Buscar por código e nome.</li>
+<li>A tabela mostra código, nome e status.</li>
+<li><strong>Novo Fornecedor</strong> pede pessoa física ou jurídica, nome, status, CNPJ, telefones, e-mail e endereço.</li>
+<li><strong>Salvar</strong> não foi clicado.</li>
+</ol>
+<p>Evidências:</p>
+<p><img alt="Fornecedores" src="file:///workspace/manual-sifit/evidencias/prints/27-fornecedores.png" /></p>
+<p><img alt="Cadastro de fornecedor" src="file:///workspace/manual-sifit/evidencias/prints/49-form-fornecedor.png" /></p>
+<p>Persistência: <code>GET /api/fornecedores/1</code>. Gravação não executada: <code>POST /api/salvar-fornecedor/</code>.</p>
+<h3>9.4 Tipos de documentos</h3>
+<p>Objetivo: classificar o documento da conta a pagar (nota, recibo, boleto).</p>
+<p>Caminho: menu <strong>Gestão → Tipos de Documentos</strong> (<code>/tipos-documento</code>).</p>
+<p>Passo a passo:</p>
+<ol>
+<li>Ver a lista: código, nome e aplicação.</li>
+<li><strong>Novo Tipo</strong> pede nome e aplicação.</li>
+<li><strong>Salvar</strong> não foi clicado.</li>
+</ol>
+<p>Evidência:</p>
+<p><img alt="Tipos de documento" src="file:///workspace/manual-sifit/evidencias/prints/28-tipos-documento.png" /></p>
+<p>Persistência: <code>GET /api/tipos-documento/1</code>, consumido também pelo formulário de conta a pagar.</p>
+<h3>9.5 Atividades</h3>
+<p>Objetivo: cadastrar atividades que geram pontos.</p>
+<p>Caminho: menu <strong>Gestão → Atividades</strong> (<code>/atividades</code>).</p>
+<p>Passo a passo:</p>
+<ol>
+<li>Buscar por código e nome.</li>
+<li>A tabela mostra código, nome, descrição e pontuação.</li>
+<li><strong>Nova Atividade</strong> pede nome, pontuação e descrição.</li>
+</ol>
+<p>Evidência:</p>
+<p><img alt="Atividades" src="file:///workspace/manual-sifit/evidencias/prints/29-atividades.png" /></p>
+<p>Persistência: <code>POST /api/buscar-atividades/</code> na listagem. Gravação não executada: <code>POST /api/salvar-atividade/</code>.</p>
+<h3>9.6 Pontuação</h3>
+<p>Objetivo: campanhas em que o aluno junta pontos e troca por produto.</p>
+<p>Caminho: menu <strong>Gestão → Pontuação</strong> (<code>/pontuacao</code>).</p>
+<p>Passo a passo:</p>
+<ol>
+<li>Abrir <strong>Pontuação</strong>.</li>
+<li>A lista mostra código, nome, tipo, período, status e ações.</li>
+<li>A mesma tela reúne produtos de resgate, atividades da campanha, ranking e pedidos de tarefa.</li>
+<li><strong>Nova Pontuação</strong> pede nome, datas, tipo, status, produto e atividade.</li>
+<li>Nada foi criado nem avaliado.</li>
+</ol>
+<p>Evidência:</p>
+<p><img alt="Pontuação" src="file:///workspace/manual-sifit/evidencias/prints/30-pontuacao.png" /></p>
+<p>Persistência: <code>POST /api/buscar-pontuacoes/</code> e <code>POST /api/buscar-pessoas-por-pontuacao/</code>. Gravação não executada: <code>POST /api/salvar-pontuacao/</code>.</p>
+<h3>9.7 Produtos</h3>
+<p>Objetivo: cadastrar o que pode ser vendido ou resgatado com pontos.</p>
+<p>Caminho: menu <strong>Gestão → Produtos</strong> (<code>/produtos</code>).</p>
+<p>Passo a passo:</p>
+<ol>
+<li>A tabela mostra código, nome, tipo, valor ou pontos e status.</li>
+<li><strong>Novo</strong> pede nome, status, descrição, tipo, preço e imagens.</li>
+<li><strong>Salvar</strong> não foi clicado.</li>
+</ol>
+<p>Evidência:</p>
+<p><img alt="Produtos" src="file:///workspace/manual-sifit/evidencias/prints/31-produtos.png" /></p>
+<p>Persistência: <code>GET /api/produtos/1</code>. Esta lista é do SIFIT. A tabela <code>produtos</code> do MySQL da aula tem 1 produto de loja e não é a origem desta tela.</p>
+<h3>9.8 Enquetes</h3>
+<p>Objetivo: publicar uma pergunta com alternativas para os alunos.</p>
+<p>Caminho: menu <strong>Gestão → Enquetes</strong> (<code>/enquetes</code>).</p>
+<p>Passo a passo:</p>
+<ol>
+<li>Buscar a enquete.</li>
+<li>A tabela mostra código, nome, pergunta e status.</li>
+<li><strong>Nova Enquete</strong> pede nome, status, pergunta e as respostas (Resposta 1 em diante).</li>
+<li>A tela também lista as respostas recebidas.</li>
+</ol>
+<p>Evidência:</p>
+<p><img alt="Enquetes" src="file:///workspace/manual-sifit/evidencias/prints/32-enquetes.png" /></p>
+<p>Persistência: <code>GET /api/enquetes/</code>. Gravação não executada: <code>POST /api/enquete/salvar/</code>.</p>
+<h2>10. Saúde</h2>
+<h3>10.1 Fichas de anamnese</h3>
+<p>Objetivo: aplicar o questionário de saúde no aluno.</p>
+<p>Caminho: menu <strong>Saúde → Fichas Anamnese</strong> (<code>/anamneses</code>).</p>
+<p>Passo a passo:</p>
+<ol>
+<li>Abrir <strong>Fichas de Anamnese</strong>.</li>
+<li><strong>Nova Anamnese</strong> inicia a aplicação de um modelo em um aluno.</li>
+<li>A configuração da matrícula pode perguntar se a anamnese deve ser feita ao concluir o contrato.</li>
+</ol>
+<p>Evidência:</p>
+<p><img alt="Fichas de anamnese" src="file:///workspace/manual-sifit/evidencias/prints/33-anamneses.png" /></p>
+<p>Persistência: a aplicação usa <code>/api/anamnese/aplicar/</code> e o salvamento usa <code>POST /api/ficha-anamnese/salvar/</code>. Nenhum questionário foi respondido neste trabalho.</p>
+<h3>10.2 Modelos de anamnese</h3>
+<p>Objetivo: montar o questionário padrão.</p>
+<p>Caminho: menu <strong>Saúde → Modelos</strong> (<code>/anamnese/modelos</code>).</p>
+<p>Passo a passo:</p>
+<ol>
+<li>Abrir <strong>Modelos de Anamnese</strong>.</li>
+<li>Usar <strong>Preview</strong> para ver o questionário como o aluno verá.</li>
+<li>Um modelo agrupa categorias e perguntas.</li>
+</ol>
+<p>Evidência:</p>
+<p><img alt="Modelos de anamnese" src="file:///workspace/manual-sifit/evidencias/prints/34-anamnese-modelos.png" /></p>
+<p>Persistência: <code>GET /api/modelos-anamnese/</code>. Gravação não executada: <code>POST /api/modelos-anamnese/salvar/</code>.</p>
+<h3>10.3 Categorias de anamnese</h3>
+<p>Objetivo: agrupar as perguntas (histórico, lesões, hábitos).</p>
+<p>Caminho: menu <strong>Saúde → Categorias</strong> (<code>/anamnese/categorias</code>).</p>
+<p>Passo a passo:</p>
+<ol>
+<li>Abrir <strong>Categorias de Anamnese</strong>.</li>
+<li><strong>Nova Categoria</strong> cria o grupo de perguntas.</li>
+</ol>
+<p>Evidência:</p>
+<p><img alt="Categorias de anamnese" src="file:///workspace/manual-sifit/evidencias/prints/35-anamnese-categorias.png" /></p>
+<p>Persistência: <code>GET /api/categorias-anamnese/</code>. Gravação não executada: <code>POST /api/categorias-anamnese/salvar/</code>.</p>
+<h3>10.4 Perguntas de anamnese</h3>
+<p>Objetivo: escrever cada pergunta e o tipo de resposta.</p>
+<p>Caminho: menu <strong>Saúde → Perguntas</strong> (<code>/perguntas-anamnese</code>).</p>
+<p>Passo a passo:</p>
+<ol>
+<li>Buscar por código e nome.</li>
+<li>A tabela mostra código, nome, pergunta, tipo de resposta e status.</li>
+<li><strong>Nova Pergunta</strong> pede nome, status, texto, número e tipo de resposta.</li>
+</ol>
+<p>Evidência:</p>
+<p><img alt="Perguntas de anamnese" src="file:///workspace/manual-sifit/evidencias/prints/36-anamnese-perguntas.png" /></p>
+<p>Persistência: <code>GET /api/perguntas-anamnese/</code>. Gravação não executada: <code>POST /api/pergunta-anamnese/salvar/</code>.</p>
+<h2>11. Inteligência</h2>
+<h3>11.1 Inteligência e automação</h3>
+<p>Objetivo: ver e disparar regras que procuram alunos em risco, inadimplentes e inativos.</p>
+<p>Caminho: menu <strong>Inteligência → Inteligência &amp; Automação</strong> (<code>/inteligencia-automacao</code>).</p>
+<p>Passo a passo:</p>
+<ol>
+<li>Abrir a <strong>Central de Automações</strong>.</li>
+<li>Ver quais automações estão ativas e quais estão disponíveis.</li>
+<li>Ler a atividade recente.</li>
+<li><strong>Executar agora</strong> roda a regra na hora. <strong>Configurar</strong> ajusta a regra. <strong>Ver resultados</strong> abre a tela seguinte.</li>
+<li>Nenhuma automação foi executada nem reconfigurada.</li>
+</ol>
+<p>Evidência:</p>
+<p><img alt="Inteligência e automação" src="file:///workspace/manual-sifit/evidencias/prints/37-inteligencia.png" /></p>
+<p>Persistência: os resultados lidos na página inicial e aqui vêm de <code>GET /api/dashboard/retencao/1</code> e <code>GET /api/inteligencia/resultados/1</code>.</p>
+<h3>11.2 Resultados da inteligência</h3>
+<p>Objetivo: consultar o que as automações já encontraram.</p>
+<p>Caminho: menu <strong>Inteligência → Resultados IA</strong> (<code>/inteligencia/resultados</code>).</p>
+<p>Passo a passo:</p>
+<ol>
+<li>Filtrar o período: hoje, 7, 30 ou 90 dias.</li>
+<li>Ler o que o SIFIT identificou.</li>
+<li>A tabela de automações mostra nome, execuções, resultados encontrados e última execução. No levantamento a última análise da retenção estava em 17/11/2026, 00:55.</li>
+</ol>
+<p>Evidência:</p>
+<p><img alt="Resultados da inteligência" src="file:///workspace/manual-sifit/evidencias/prints/38-resultados-ia.png" /></p>
+<p>Persistência: <code>GET /api/inteligencia/resultados/1</code>.</p>
+<h2>12. Configurações</h2>
+<h3>12.1 Configurações da academia</h3>
+<p>Objetivo: ligar ou desligar regras que mudam o comportamento das outras telas.</p>
+<p>Caminho: menu <strong>Configurações → Configurações</strong> (<code>/configuracoes</code>).</p>
+<p>Abas observadas: Home, Biometria, Avaliação, Aniversário, Pagamento, Integrações e Design.</p>
+<p>Campos que alteram o resto do sistema:</p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Efeito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Plano do SIFIT</td>
+<td>plano contratado da própria plataforma</td>
+</tr>
+<tr>
+<td>Liberar acesso ao sistema desktop</td>
+<td>habilita o desktop</td>
+</tr>
+<tr>
+<td>Controle de presença</td>
+<td>define como a presença entra (ligada à tela Presenças)</td>
+</tr>
+<tr>
+<td>Academia marcada como Box</td>
+<td>muda a operação para aula em grupo</td>
+</tr>
+<tr>
+<td>Trabalha com turmas</td>
+<td>exibe o uso de turmas na matrícula e na agenda</td>
+</tr>
+<tr>
+<td>Dias para contar cliente como ausente</td>
+<td>alimenta o indicador de ausentes da página inicial</td>
+</tr>
+<tr>
+<td>Cobrar multa por atraso</td>
+<td>entra no recebimento</td>
+</tr>
+<tr>
+<td>Imprimir comprovante de recebimento</td>
+<td>vale para o desktop</td>
+</tr>
+<tr>
+<td>Perguntar sobre anamnese ao concluir matrícula</td>
+<td>abre a anamnese no fim do contrato</td>
+</tr>
+</tbody>
+</table>
+<p>Evidência:</p>
+<p><img alt="Configurações" src="file:///workspace/manual-sifit/evidencias/prints/39-configuracoes.png" /></p>
+<p>Persistência: <code>GET /api/configuracoes/1</code> e <code>POST /api/planos-sifit/1</code>. A gravação é <code>POST /api/configuracoes/alterar/</code>. Nenhuma opção foi alterada.</p>
+<h3>12.2 Modelo de ficha</h3>
+<p>Objetivo: criar um treino modelo para reutilizar em vários alunos.</p>
+<p>Caminho: menu <strong>Configurações → Modelo Ficha</strong> (<code>/fichas-treino-modelo</code>).</p>
+<p>Passo a passo:</p>
+<ol>
+<li>Abrir <strong>Modelos de Ficha</strong>.</li>
+<li>Buscar por código, título e criador.</li>
+<li><strong>Criar Modelo</strong> pede nome do modelo e personal.</li>
+<li>A montagem dos exercícios segue a mesma biblioteca da ficha do aluno.</li>
+</ol>
+<p>Evidência:</p>
+<p><img alt="Modelos de ficha" src="file:///workspace/manual-sifit/evidencias/prints/40-modelo-ficha.png" /></p>
+<p>Persistência: <code>GET /api/fichas-modelo/1</code>.</p>
+<h3>12.3 Aplicativo</h3>
+<p>Objetivo: moderar o app do aluno (notificações, postagens e denúncias).</p>
+<p>Caminho: menu <strong>Configurações → Aplicativo</strong> (<code>/aplicativo</code>).</p>
+<p>Passo a passo:</p>
+<ol>
+<li>Abrir <strong>Aplicativo</strong>.</li>
+<li>Em <strong>Notificações</strong>, ver código, mensagem e data, ou <strong>Criar Notificação</strong> (mensagem, destinatário e prévia no celular).</li>
+<li>Em <strong>Postagens</strong>, ver código, texto, status e data.</li>
+<li>Em <strong>Denúncias</strong>, ver a postagem denunciada e o motivo. <strong>Recusar</strong> ou aprovar muda o status. Nenhuma denúncia foi moderada.</li>
+</ol>
+<p>Evidência:</p>
+<p><img alt="Aplicativo" src="file:///workspace/manual-sifit/evidencias/prints/41-aplicativo.png" /></p>
+<p>Persistência:</p>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>Caminho</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td><code>/api/notificacoes/listar/1</code></td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/api/posts/listar/1</code></td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/api/denuncias/listar/1</code></td>
+</tr>
+</tbody>
+</table>
+<h2>13. Mapa rápido: tela, print e leitura</h2>
+<table>
+<thead>
+<tr>
+<th>Função</th>
+<th>Rota</th>
+<th>Print</th>
+<th>Leitura que a tela fez</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Login</td>
+<td><code>/login</code></td>
+<td><code>01-login.png</code></td>
+<td>sessão em <code>verifica-token-logado</code></td>
+</tr>
+<tr>
+<td>Página inicial</td>
+<td><code>/dashboard</code></td>
+<td><code>02-pagina-inicial.png</code></td>
+<td><code>dados-principais-home</code>, <code>dashboard/retencao</code></td>
+</tr>
+<tr>
+<td>Dashboard</td>
+<td><code>/dash</code></td>
+<td><code>03-dashboard.png</code></td>
+<td>presença, idade, sexo, matrículas, avaliações</td>
+</tr>
+<tr>
+<td>Presenças</td>
+<td><code>/presencas</code></td>
+<td><code>04-presencas.png</code></td>
+<td><code>presencas/paginacao</code></td>
+</tr>
+<tr>
+<td>Clientes</td>
+<td><code>/clientes</code></td>
+<td><code>05-clientes.png</code></td>
+<td><code>clientes-paginacao</code>, <code>clientes/tela-web</code></td>
+</tr>
+<tr>
+<td>Matrículas</td>
+<td><code>/matriculas</code></td>
+<td><code>06-matriculas.png</code></td>
+<td><code>matriculas/paginacao</code></td>
+</tr>
+<tr>
+<td>Avaliações</td>
+<td><code>/avaliacoes</code></td>
+<td><code>07-avaliacoes.png</code></td>
+<td><code>avaliacao/tela-web</code></td>
+</tr>
+<tr>
+<td>Contas a receber</td>
+<td><code>/contas-receber</code></td>
+<td><code>08-contas-receber.png</code></td>
+<td><code>contas-receber/tela-web</code></td>
+</tr>
+<tr>
+<td>Contas a pagar</td>
+<td><code>/contas-pagar</code></td>
+<td><code>09-contas-pagar.png</code></td>
+<td><code>contas-pagar/por-data</code></td>
+</tr>
+<tr>
+<td>Ficha de treino</td>
+<td><code>/fichas-treino</code></td>
+<td><code>10-ficha-treino.png</code></td>
+<td><code>fichas</code></td>
+</tr>
+<tr>
+<td>Exercícios</td>
+<td><code>/exercicios</code></td>
+<td><code>11-exercicios.png</code></td>
+<td><code>grupo-muscular</code></td>
+</tr>
+<tr>
+<td>Grupos musculares</td>
+<td><code>/grupos-musculares</code></td>
+<td><code>12-grupos-musculares.png</code></td>
+<td><code>grupo-muscular</code></td>
+</tr>
+<tr>
+<td>Objetivos</td>
+<td><code>/objetivos-treino</code></td>
+<td><code>13-objetivos-treino.png</code></td>
+<td><code>objetivos-treino</code></td>
+</tr>
+<tr>
+<td>Grupos</td>
+<td><code>/grupos</code></td>
+<td><code>14-grupos.png</code></td>
+<td><code>grupos</code></td>
+</tr>
+<tr>
+<td>Turmas</td>
+<td><code>/turmas</code></td>
+<td><code>15-turmas.png</code></td>
+<td><code>turma/listar</code></td>
+</tr>
+<tr>
+<td>Caixas</td>
+<td><code>/caixas</code></td>
+<td><code>16-caixas.png</code></td>
+<td>caixa / paginação</td>
+</tr>
+<tr>
+<td>Pagar.me</td>
+<td><code>/pagarme</code></td>
+<td><code>17-pagarme.png</code></td>
+<td>transações, saldo, recebíveis</td>
+</tr>
+<tr>
+<td>Despesas fixas</td>
+<td><code>/despesas-fixas</code></td>
+<td><code>18-despesas-fixas.png</code></td>
+<td><code>despesas-fixas</code></td>
+</tr>
+<tr>
+<td>Relatórios</td>
+<td><code>/relatorios</code></td>
+<td><code>19-relatorios.png</code></td>
+<td><code>relatorio</code></td>
+</tr>
+<tr>
+<td>Prospecção</td>
+<td><code>/prospeccao</code></td>
+<td><code>20-prospeccao.png</code></td>
+<td>leads da prospecção</td>
+</tr>
+<tr>
+<td>Planos</td>
+<td><code>/planos</code></td>
+<td><code>21-planos.png</code></td>
+<td><code>planos</code></td>
+</tr>
+<tr>
+<td>Modelos de contrato</td>
+<td><code>/modelos-contrato</code></td>
+<td><code>22-modelos-contrato.png</code></td>
+<td><code>modelos-contrato</code></td>
+</tr>
+<tr>
+<td>Tipos de pagamento</td>
+<td><code>/tipos-pagamento</code></td>
+<td><code>23-tipos-pagamento.png</code></td>
+<td><code>tipo-pagamento</code></td>
+</tr>
+<tr>
+<td>Bandeiras</td>
+<td><code>/bandeiras</code></td>
+<td><code>24-bandeiras.png</code></td>
+<td><code>bandeiras</code></td>
+</tr>
+<tr>
+<td>Colaboradores</td>
+<td><code>/colaboradores</code></td>
+<td><code>25-colaboradores.png</code></td>
+<td><code>colaboradores</code></td>
+</tr>
+<tr>
+<td>Funções</td>
+<td><code>/funcoes</code></td>
+<td><code>26-funcoes.png</code></td>
+<td><code>funcoes-colaborador</code></td>
+</tr>
+<tr>
+<td>Fornecedores</td>
+<td><code>/fornecedores</code></td>
+<td><code>27-fornecedores.png</code></td>
+<td><code>fornecedores</code></td>
+</tr>
+<tr>
+<td>Tipos de documento</td>
+<td><code>/tipos-documento</code></td>
+<td><code>28-tipos-documento.png</code></td>
+<td><code>tipos-documento</code></td>
+</tr>
+<tr>
+<td>Atividades</td>
+<td><code>/atividades</code></td>
+<td><code>29-atividades.png</code></td>
+<td><code>buscar-atividades</code></td>
+</tr>
+<tr>
+<td>Pontuação</td>
+<td><code>/pontuacao</code></td>
+<td><code>30-pontuacao.png</code></td>
+<td><code>buscar-pontuacoes</code></td>
+</tr>
+<tr>
+<td>Produtos</td>
+<td><code>/produtos</code></td>
+<td><code>31-produtos.png</code></td>
+<td><code>produtos</code></td>
+</tr>
+<tr>
+<td>Enquetes</td>
+<td><code>/enquetes</code></td>
+<td><code>32-enquetes.png</code></td>
+<td><code>enquetes</code></td>
+</tr>
+<tr>
+<td>Anamneses</td>
+<td><code>/anamneses</code></td>
+<td><code>33-anamneses.png</code></td>
+<td>fichas de anamnese</td>
+</tr>
+<tr>
+<td>Modelos de anamnese</td>
+<td><code>/anamnese/modelos</code></td>
+<td><code>34-anamnese-modelos.png</code></td>
+<td><code>modelos-anamnese</code></td>
+</tr>
+<tr>
+<td>Categorias de anamnese</td>
+<td><code>/anamnese/categorias</code></td>
+<td><code>35-anamnese-categorias.png</code></td>
+<td><code>categorias-anamnese</code></td>
+</tr>
+<tr>
+<td>Perguntas</td>
+<td><code>/perguntas-anamnese</code></td>
+<td><code>36-anamnese-perguntas.png</code></td>
+<td><code>perguntas-anamnese</code></td>
+</tr>
+<tr>
+<td>Inteligência</td>
+<td><code>/inteligencia-automacao</code></td>
+<td><code>37-inteligencia.png</code></td>
+<td>automações e retenção</td>
+</tr>
+<tr>
+<td>Resultados</td>
+<td><code>/inteligencia/resultados</code></td>
+<td><code>38-resultados-ia.png</code></td>
+<td><code>inteligencia/resultados</code></td>
+</tr>
+<tr>
+<td>Configurações</td>
+<td><code>/configuracoes</code></td>
+<td><code>39-configuracoes.png</code></td>
+<td><code>configuracoes</code></td>
+</tr>
+<tr>
+<td>Modelo de ficha</td>
+<td><code>/fichas-treino-modelo</code></td>
+<td><code>40-modelo-ficha.png</code></td>
+<td><code>fichas-modelo</code></td>
+</tr>
+<tr>
+<td>Aplicativo</td>
+<td><code>/aplicativo</code></td>
+<td><code>41-aplicativo.png</code></td>
+<td>posts, notificações, denúncias</td>
+</tr>
+</tbody>
+</table>
+<p>Os prints <code>42</code> a <code>52</code> são os formulários e os cadastros de apoio citados nas seções 5, 7 e 9.</p>
+<h2>14. Vídeos</h2>
+<p>As gravações abrem nesta página, cada uma com o próprio player: <a href="https://ale7639.github.io/extensao-6-SIFIT-Diego-Wallace/manual-sifit/evidencias/video/assistir.html">assistir os vídeos</a>.</p>
+<ol>
+<li>Início e presença — <code>evidencias/video/01-inicio-e-presenca.mp4</code></li>
+<li>Clientes e matrículas — <code>evidencias/video/02-clientes-e-matriculas.mp4</code></li>
+<li>Avaliações e treino — <code>evidencias/video/03-avaliacoes-e-treino.mp4</code></li>
+<li>Financeiro — <code>evidencias/video/04-financeiro.mp4</code></li>
+<li>Cadastros — <code>evidencias/video/05-cadastros.mp4</code></li>
+<li>Anamnese e aplicativo — <code>evidencias/video/06-anamnese-e-aplicativo.mp4</code></li>
+<li>Percurso completo, da página inicial até o aplicativo — <code>evidencias/video/manual-sifit-telas.mp4</code></li>
+</ol>
+<p>O material da aula pede esses vídeos também no Google Drive. O link deve ser colado no <a href="file:///workspace/manual-sifit/../README.md">README</a>, no lugar de <code>COLOCAR_LINK_DO_GOOGLE_DRIVE</code>.</p>
+<p>Sugestão de narração, se a dupla for regravar com o Jam:</p>
+<ol>
+<li>Mostrar o login e a página inicial, lendo dois números (ativos e valor em aberto).</li>
+<li>Abrir Clientes, apontar um código da lista e dizer que a tela chamou <code>POST /api/clientes-paginacao/1</code>.</li>
+<li>Abrir o MySQL Workbench no schema <code>u339572246_alfa1</code>, mostrar <code>SHOW TABLES</code> e que não existe tabela de matrícula nem de presença.</li>
+<li>Voltar e percorrer matrícula, avaliação, ficha, caixa e configurações.</li>
+</ol>
+<h2>15. O que ficou de fora de propósito</h2>
+<ul>
+<li>Senhas do slide.</li>
+<li>Gravação, edição, cancelamento, cobrança, saque e moderação. O ambiente é compartilhado pela turma.</li>
+<li>Dados pessoais além do que o print da própria tela já mostra. CPF, e-mail e telefone não são transcritos aqui.</li>
+</ul>
+</body>
+</html>
