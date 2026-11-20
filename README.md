@@ -27,10 +27,14 @@ O manual está na pasta [manual-sifit](manual-sifit/MANUAL.md).
 
 O arquivo solto no GitHub não abre no visualizador. Os vídeos abrem nesta página, um para cada parte do sistema: [assistir os vídeos](https://ale7639.github.io/extensao-6-SIFIT-Diego-Wallace/manual-sifit/evidencias/video/assistir.html). O material da aula pede também uma cópia no Drive.
 
-## Como usar este material
+# Como usar este material
 
 1. Abra o [manual](manual-sifit/MANUAL.md).
 2. Cada função descreve o caminho no menu, o passo a passo e o print.
 3. Os vídeos percorrem as mesmas telas, separados por parte do sistema.
 
 Nenhum cenário de teste, plano de testes ou relatório de bugs faz parte desta entrega.
+
+
+
+
