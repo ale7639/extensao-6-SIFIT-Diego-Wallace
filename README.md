@@ -16,6 +16,7 @@ O manual está na pasta [manual-sifit](manual-sifit/MANUAL.md).
 | Item | Onde está |
 | --- | --- |
 | Manual de uso | [manual-sifit/MANUAL.md](manual-sifit/MANUAL.md) |
+| Manual em PDF | [manual-sifit/MANUAL-SIFIT.pdf](manual-sifit/MANUAL-SIFIT.pdf) |
 | Prints das telas | [manual-sifit/evidencias/prints](manual-sifit/evidencias/prints) |
 | Vídeos de uso (player) | [Abrir os vídeos](https://ale7639.github.io/extensao-6-SIFIT-Diego-Wallace/manual-sifit/evidencias/video/assistir.html) |
 | Prints do banco | [manual-sifit/evidencias/banco](manual-sifit/evidencias/banco) |
@@ -29,7 +30,7 @@ O arquivo solto no GitHub não abre no visualizador. Os vídeos abrem nesta pág
 
 # Como usar este material
 
-1. Abra o [manual](manual-sifit/MANUAL.md).
+1. Abra o [manual](manual-sifit/MANUAL.md) ou baixe o [PDF](manual-sifit/MANUAL-SIFIT.pdf).
 2. Cada função descreve o caminho no menu, o passo a passo e o print.
 3. Os vídeos percorrem as mesmas telas, separados por parte do sistema.
 
